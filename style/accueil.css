@@ -1,0 +1,128 @@
+/* --------------------------- 
+ * Global Reset
+ * ---------------------------- */
+
+/* Applique box-sizing à tous les éléments */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* --------------------------- 
+ * Responsive Design 
+ * ---------------------------- */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .lien-page-header {
+    flex-direction: column-reverse;
+    padding-bottom: 10px;
+  }
+}
+
+/* Petites tablettes et grands téléphones */
+@media (max-width: 768px) {
+  .lien-page-header {
+    flex-direction: column-reverse;
+    padding: 15px 0;
+  }
+}
+
+/* 
+  * --------------------------- 
+  * Main 
+  * ----------------------------
+*/
+
+.intro {
+  background: linear-gradient(90deg, #ffffff, #f32bf3);
+}
+
+.section-presentation {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.presentation {
+  padding: 25px;
+  width: 550px;
+  height: 300px;
+  line-height: 23px;
+}
+
+.presentation-span {
+  color: #970097;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.presentation-text-content {
+  margin: 20px 0;
+  text-align: justify;
+}
+
+.presentation-span,
+.presentation-text-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 3s ease-out, transform 3s ease-out;
+}
+
+.presentation.show .presentation-span,
+.presentation.show .presentation-text-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.photo-body.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.liste-domaines {
+  padding-bottom: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 3s ease-out, transform 3s ease-out;
+  line-height: 20px;
+}
+
+.presentation.show .liste-domaines {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.liste-domaines span {
+  display: block;
+  font-size: 19px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.liste-domaines-conteneur {
+  display: flex;
+}
+
+.liste-domaines-list-1,
+.liste-domaines-list-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.liste-domaines-list-1 {
+  margin-right: 70px;
+}
+
+.photo-body {
+  height: 465px;
+  width: 470px;
+  padding-top: 69px;
+  transform: scale(1.05);
+  transition: opacity 3s ease-out, transform 3s ease-out;
+}

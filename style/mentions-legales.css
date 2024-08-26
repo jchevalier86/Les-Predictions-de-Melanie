@@ -1,0 +1,99 @@
+/* --------------------------- 
+ * Global Reset
+ * ---------------------------- 
+*/
+
+/* Applique box-sizing à tous les éléments et leurs pseudo-éléments */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* --------------------------- 
+ * Responsive Design 
+ * ---------------------------- */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .lien-page-header {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .back-home {
+    margin-bottom: 11px;
+    margin-left: 11px;
+  }
+}
+
+/* Petites tablettes et grands téléphones */
+@media (max-width: 768px) {
+  .lien-page-header {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .back-home {
+    margin-bottom: 11px;
+    margin-left: 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .lien-page-header {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .back-home {
+    margin-bottom: 11px;
+    margin-left: 11px;
+  }
+}
+
+/* 
+  * --------------------------- 
+  * Header 
+  * ----------------------------
+*/
+
+.accueil button {
+  cursor: pointer;
+}
+
+/* 
+  * --------------------------- 
+  * Main 
+  * ----------------------------
+*/
+
+.intro {
+  padding-top: 10px;
+}
+
+.section-presentation {
+  display: flex;
+  justify-content: center;
+}
+
+.presentation {
+  width: 550px;
+  line-height: 23px;
+}
+
+.presentation-text-content {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.text {
+  text-align: center;
+}
+
+/* 
+  * --------------------------- 
+  * Footer 
+  * ----------------------------
+*/
+
+footer {
+  background: linear-gradient(90deg, rgb(15, 0, 146), rgb(176, 0, 176));
+  width: 100%;
+}

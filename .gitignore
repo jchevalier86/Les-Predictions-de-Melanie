@@ -1,0 +1,16 @@
+# Environnement
+.env
+
+# Composer
+.composer.json
+.composer.lock
+
+# Libs, Vendor
+libs/*
+vendor/*
+
+# Google
+google/*
+
+# Fichier texte Mention Légales
+.Mention Légales.rtf

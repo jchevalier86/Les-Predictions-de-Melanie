@@ -1,0 +1,266 @@
+/* style sur les pages inscription, connexion, contact, mot-de-passe-perdu et reset_password */
+
+/* --------------------------- 
+ * Global Reset
+ * ---------------------------- 
+*/
+
+/* 
+ * Applique la propriété box-sizing: border-box à tous les éléments,
+ * ainsi qu'à leurs pseudo-éléments ::before et ::after. 
+ * Cela inclut le padding et la bordure dans les dimensions totales des éléments.
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 
+  * --------------------------- 
+  * Body 
+  * ----------------------------
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  background-image: url(../images/etoile-filante.jpeg);
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------------------- 
+ * Responsive Design 
+ * ---------------------------- 
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .lien-page-header {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .back-home {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 70%;
+  }
+  .icone-connect {
+    margin-top: 10px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .container h2,
+  .container-2 h2 {
+    font-size: 19px;
+  }
+  textarea {
+    max-width: 100%;
+  }
+}
+
+/* Petites tablettes et grands téléphones */
+@media (max-width: 768px) {
+  .lien-page-header {
+    flex-direction: column;
+  }
+  .back-home {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 70%;
+  }
+  .icone-connect {
+    margin-top: 10px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .container,
+  .container-2 {
+    max-width: 90%;
+  }
+  .container h2,
+  .container-2 h2 {
+    font-size: 18px;
+  }
+  textarea {
+    max-width: 100%;
+  }
+}
+
+/* Téléphones portables */
+@media (max-width: 360px) {
+  .back-home {
+    margin-bottom: 10px;
+  }
+  .title {
+    font-size: 18px;
+  }
+  .container,
+  .container-2 {
+    max-width: 80%;
+  }
+}
+
+/* 
+  * ------------------------ 
+  * Header 
+  * ------------------------ 
+*/
+
+/* 
+  * Style de la navigation dans l'en-tête. 
+  * Centrage horizontal et vertical des éléments à l'intérieur,
+  * avec une couleur de fond rose transparent.
+*/
+
+.lien-page-inscription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgb(15, 0, 146), rgb(176, 0, 176));
+}
+
+/* 
+  * Style du titre dans l'en-tête, 
+  * couleur blanche et police différente pour se démarquer.
+*/
+
+.title {
+  color: #ffffff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 20px;
+}
+
+/* 
+  * ------------------------ 
+  * Main 
+  * ------------------------ 
+*/
+
+/* 
+  * Conteneur principal pour le formulaire, 
+  * avec une largeur maximale définie, centrée horizontalement.
+  * Ajout de marges et de padding, d'un fond blanc, 
+  * des coins arrondis et une ombre pour l'effet de carte.
+*/
+
+.container,
+.container-2 {
+  width: 350px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  overflow: scroll;
+}
+
+/* 
+  * Style du titre secondaire (h2) dans le conteneur,
+  * avec une taille de police et une couleur définies, et un centrage du texte.
+*/
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/* 
+  * Ajout d'une marge supérieure au formulaire pour espacer du titre.
+*/
+
+form {
+  margin-top: 10px;
+}
+
+/* 
+  * Style des labels des champs de formulaire,
+  * avec une marge inférieure pour espacer du champ et une couleur de texte gris.
+*/
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+/* 
+  * Style des champs de saisie du formulaire, 
+  * avec une largeur de 100%, padding, marges inférieures,
+  * bordure grise, coins arrondis et une taille de police définie.
+*/
+
+select,
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13.5px;
+}
+
+/* 
+  * Style du bouton de soumission, 
+  * avec une couleur de fond violet, texte blanc, padding,
+  * sans bordure, coins arrondis, curseur en forme de pointeur, 
+  * taille de police définie et largeur de 100%.
+*/
+
+input[type="submit"] {
+  background-color: #6a0dad;
+  color: #fff;
+  padding: 12px 14px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+textarea {
+  max-width: 100%;
+  padding-left: 4px;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+/* 
+  * Changement de couleur de fond du bouton lors du survol, 
+  * pour un effet visuel interactif.
+*/
+
+button:hover {
+  background-color: #4f0a68;
+}
+
+/* 
+  * La classe star pour ajouter une couleur rouge aux éléments, 
+  * souvent utilisée pour indiquer les champs obligatoires.
+*/
+
+.star {
+  color: red;
+}
+
+.inscription-google {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

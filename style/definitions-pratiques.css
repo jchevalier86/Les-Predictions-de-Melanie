@@ -1,0 +1,216 @@
+/* style sur les pages définitions et pratiques */
+
+/* --------------------------- 
+ * Global Reset
+ * ---------------------------- 
+*/
+
+/* Applique box-sizing à tous les éléments */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* --------------------------- 
+ * Responsive Design 
+ * ---------------------------- 
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .lien-page-header {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .back-home {
+    margin-bottom: 11px;
+    margin-left: 11px;
+  }
+  .circle-1-2 {
+    margin-top: 10px;
+  }
+  .section1-col1 {
+    margin: 0;
+    padding: 0;
+  }
+  .section-presentation {
+    padding-bottom: 130px;
+  }
+  .presentation.show {
+    padding: 30px 30px;
+    width: 100%;
+  }
+  .presentation-text-content {
+    line-height: 30px;
+  }
+  .photo {
+    margin: 0;
+    padding: 0;
+  }
+  .photo-body-1.show,
+  .photo-body-2.show,
+  .photo-body-3.show {
+    padding: 26px;
+  }
+  .photo-body-1.show,
+  .photo-body-2.show {
+    width: 100%;
+    height: 370px;
+  }
+  .photo-body-3.show {
+    width: 57%;
+    height: 400px;
+  }
+  .photo-body-4.show {
+    padding: 32px;
+    margin-top: 25px;
+    width: 100%;
+    height: 600px;
+  }
+}
+
+/* Petites tablettes et grands téléphones */
+@media (max-width: 768px) {
+  .lien-page-header {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .back-home {
+    margin-bottom: 11px;
+    margin-left: 11px;
+  }
+  .circle-1-2 {
+    margin-top: 10px;
+  }
+  .section1-col1 {
+    margin: 0;
+    padding: 0;
+  }
+  .section-presentation {
+    padding-bottom: 130px;
+  }
+  .presentation.show {
+    padding: 30px 30px;
+  }
+  .presentation-text-content {
+    line-height: 30px;
+  }
+  .photo {
+    margin: 0;
+    padding: 0;
+  }
+  .photo-body-1.show,
+  .photo-body-2.show,
+  .photo-body-3.show {
+    padding: 26px;
+  }
+  .photo-body-4.show {
+    padding: 40px;
+    margin-top: 25px;
+  }
+}
+
+/* Téléphones portables */
+@media (max-width: 360px) {
+  header .hamburger {
+    top: 102px;
+  }
+  .presentation.show {
+    padding: 15px 30px;
+  }
+  .photo-body-4.show {
+    padding: 30px;
+  }
+}
+
+/* 
+  * --------------------------- 
+  * Header 
+  * ----------------------------
+*/
+
+.accueil button {
+  cursor: pointer;
+}
+
+/* 
+  * --------------------------- 
+  * Main 
+  * ----------------------------
+*/
+
+.intro {
+  background: linear-gradient(90deg, #ffffff, #f32bf3);
+}
+
+/* Style pour les photos */
+.photo-body-1,
+.photo-body-2,
+.photo-body-3,
+.photo-body-4 {
+  transform: scale(1.05);
+  transition: opacity 3s ease-out, transform 3s ease-out;
+}
+
+.photo-body-1 {
+  height: 354px;
+  width: 430px;
+  padding-top: 68px;
+}
+
+.photo-body-2 {
+  height: 329px;
+  width: 420px;
+  padding-top: 67px;
+}
+
+.photo-body-3 {
+  height: 559px;
+  width: 380px;
+  padding-top: 68px;
+}
+
+.photo-body-4 {
+  height: 768px;
+  width: 500px;
+  padding-top: 66px;
+  padding-left: 56px;
+}
+
+/* Section présentation */
+.section-presentation {
+  padding-bottom: 130px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.section1-col1 {
+  display: flex;
+}
+
+.presentation {
+  padding: 40px 25px;
+  width: 550px;
+  line-height: 23px;
+}
+
+.presentation-text-content,
+.presentation-span {
+  margin: 20px 0;
+  text-align: justify;
+  hyphens: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 3s ease-out, transform 3s ease-out;
+}
+
+.presentation.show .presentation-text-content,
+.presentation.show .presentation-span,
+.photo-body-1.show,
+.photo-body-2.show,
+.photo-body-3.show,
+.photo-body-4.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}

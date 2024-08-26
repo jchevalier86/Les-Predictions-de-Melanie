@@ -1,0 +1,257 @@
+/* --------------------------- 
+ * Global Reset
+ * ---------------------------- 
+*/
+
+/* Assure que le padding et la bordure sont inclus dans la largeur et la hauteur des éléments */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 
+  * --------------------------- 
+  * Body 
+  * ----------------------------
+*/
+
+body {
+  background-color: #f0f0f0;
+  background-image: url(../images/etoile-filante.jpeg);
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------------------- 
+ * Responsive Design 
+ * ---------------------------- 
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .lien-page-header {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .back-home {
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  .icone-connect {
+    margin: 10px 0 10px 10px;
+  }
+  .container {
+    max-width: 90%;
+  }
+  .avis-container {
+    max-width: 90%;
+  }
+}
+
+/* Petites tablettes et grands téléphones */
+@media (max-width: 768px) {
+  .lien-page-header {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .back-home {
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  .icone-connect {
+    margin: 10px 0 10px 10px;
+  }
+  .container {
+    max-width: 90%;
+  }
+  .avis-container {
+    max-width: 90%;
+  }
+}
+
+/* 
+  * --------------------------- 
+  * Header 
+  * ----------------------------
+*/
+
+.accueil button {
+  cursor: pointer;
+}
+
+/* 
+  * --------------------------- 
+  * Main 
+  * ----------------------------
+*/
+
+.container {
+  width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2,
+h6 {
+  font-size: 24px;
+  color: #6a0dad;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+/* Change la couleur des étoiles survolées et de toutes les étoiles précédentes */
+.rating input:checked ~ label,
+.rating input:checked ~ label ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #ffd700;
+}
+
+.rating-stars {
+  color: #ffd700;
+}
+
+.rating-star {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  width: 120px;
+}
+
+.rating-star-1:hover .rating-star,
+.rating-star-2:hover .rating-star,
+.rating-star-3:hover .rating-star,
+.rating-star-4:hover .rating-star,
+.rating-star-5:hover .rating-star {
+  visibility: visible;
+  opacity: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #666;
+  text-align: left;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+.submit {
+  background-color: #6a0dad;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #4f0a68;
+}
+
+.star {
+  color: red;
+}
+
+/* Styles pour les avis */
+.avis-container {
+  width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.avis-name {
+  font-weight: 600;
+}
+
+.hidden {
+  display: none;
+}
+
+.avis-item {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.voir-plus-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#voir-plus {
+  background-color: #6a0dad;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#voir-plus:hover {
+  background-color: #4f0a68;
+}

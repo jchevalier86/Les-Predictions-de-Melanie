@@ -1,0 +1,103 @@
+/* --------------------------- 
+ * Global Reset
+ * ---------------------------- 
+*/
+
+/* 
+  * Applique la propriété box-sizing: border-box à tous les éléments,
+  * ainsi qu'à leurs pseudo-éléments ::before et ::after. 
+  * Cela inclut le padding et la bordure dans les dimensions totales des éléments.
+*/
+
+/* Applique box-sizing à tous les éléments */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* --------------------------- 
+ * Responsive Design 
+ * ---------------------------- 
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .lien-page-header {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .back-home {
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+  .intro h1 {
+    font-size: 19px;
+  }
+}
+
+/* Petites tablettes et grands téléphones */
+@media (max-width: 768px) {
+  .lien-page-header {
+    flex-direction: column;
+  }
+  .back-home {
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+  .intro h1 {
+    font-size: 18px;
+  }
+  .intro h2 {
+    text-align: left;
+  }
+}
+
+/* 
+  * --------------------------- 
+  * Header 
+  * ----------------------------
+*/
+
+.accueil button {
+  cursor: pointer;
+}
+
+/* 
+  * --------------------------- 
+  * Main 
+  * ----------------------------
+*/
+
+.section-presentation {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.section1-col1 {
+  display: flex;
+}
+
+.presentation {
+  padding: 25px;
+  width: 550px;
+  line-height: 23px;
+}
+
+.presentation-text-content {
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.contact-paypal {
+  text-decoration: none;
+  font-weight: 500;
+  color: #0000ff;
+}
+
+.contact-paypal:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
