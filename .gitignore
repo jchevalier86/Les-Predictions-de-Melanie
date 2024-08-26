@@ -2,8 +2,8 @@
 .env
 
 # Composer
-.composer.json
-.composer.lock
+composer.json
+composer.lock
 
 # Libs, Vendor
 libs/*
@@ -12,5 +12,14 @@ vendor/*
 # Google
 google/*
 
+# Dossier Images
+images/*
+
+# Dossier Projet Maquettes
+projet_maquettes/*
+
 # Fichier texte Mention Légales
-.Mention Légales.rtf
+Mention Légales.rtf
+
+# Fichier SQL
+lespredictionsdemelanie .sql
