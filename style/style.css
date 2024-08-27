@@ -24,7 +24,6 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Assure que la page remplit au moins la hauteur de l'écran */
 }
 
 /* --------------------------- 
@@ -102,9 +101,11 @@ body {
   }
   .photo {
     width: 100%;
+    height: auto;
     text-align: center;
   }
   .photo img {
+    width: 75%;
     padding: 160px 40px 40px 40px;
   }
   footer {
@@ -225,20 +226,25 @@ body {
     max-width: 350px;
   }
   .liste-domaines {
-    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 16px;
   }
   .liste-domaines-list-1 {
     margin-right: 40px;
   }
   .photo {
-    margin: 200px 20px 0 0;
-    width: 100%;
+    margin-top: 200px;
+    width: 90%;
+    height: auto;
     text-align: center;
   }
   .photo img {
-    width: 100%; /* Ajuste la largeur de l'image */
-    height: auto; /* Ajuste la hauteur automatiquement */
-    padding: 160px 0 10px 10px;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: auto;
   }
   .photo-body-1 img,
   .photo-body-2 img {
@@ -247,7 +253,7 @@ body {
     padding: 40px 0 30px 0;
   }
   .lien-page-footer {
-    height: 69em;
+    height: 42em;
   }
   .nav-links-2 {
     flex-direction: column;
@@ -289,8 +295,12 @@ body {
   header .hamburger {
     top: 110px;
   }
+  .photo img {
+    width: 100%;
+    height: auto;
+  }
   .lien-page-footer {
-    height: 59.2em;
+    height: 43em;
   }
 }
 
@@ -448,6 +458,7 @@ header {
 
 .circle-1-2 {
   display: flex;
+  overflow-x: hidden;
 }
 
 /* --------------------------- 
@@ -551,14 +562,13 @@ footer {
 
 .nav-links-2 {
   display: flex;
-  justify-content: center;
-  gap: 8em;
+  justify-content: space-evenly;
   letter-spacing: 0.8px;
 }
 
 .definition-pratique {
   display: flex;
-  gap: 6em;
+  gap: 3em;
 }
 
 .lien-page-footer a {

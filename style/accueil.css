@@ -46,7 +46,7 @@
 
 .presentation {
   padding: 25px;
-  width: 550px;
+  max-width: 550px;
   height: 300px;
   line-height: 23px;
 }
@@ -62,6 +62,7 @@
 .presentation-text-content {
   margin: 20px 0;
   text-align: justify;
+  hyphens: auto;
 }
 
 .presentation-span,
@@ -121,8 +122,8 @@
 
 .photo-body {
   height: 465px;
-  width: 470px;
-  padding-top: 69px;
+  max-width: 470px;
+  padding-top: 75px;
   transform: scale(1.05);
   transition: opacity 3s ease-out, transform 3s ease-out;
 }
