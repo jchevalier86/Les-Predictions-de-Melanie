@@ -19,11 +19,11 @@
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1em;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
+  max-width: 100%;
+  height: auto;
 }
 
 /* --------------------------- 
@@ -34,7 +34,7 @@ body {
 @media (min-width: 768px) and (max-width: 1024px) {
   body,
   .intro .presentation-span {
-    font-size: 15px;
+    font-size: 0.9375em;
   }
   .lien-page-header .navbar .dropdown-content a {
     color: #fff;
@@ -63,10 +63,10 @@ body {
     width: 30%;
   }
   .intro h1 {
-    font-size: 19px;
+    font-size: 1.1875em;
   }
   .intro h2 {
-    font-size: 18px;
+    font-size: 1.125em;
   }
   h1,
   h2,
@@ -88,28 +88,9 @@ body {
     align-items: center;
   }
   .presentation {
-    max-width: 584px;
-  }
-  .liste-domaines {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 30px;
-  }
-  .liste-domaines-list-1 {
-    margin-right: 40px;
-  }
-  .photo {
-    width: 100%;
-    height: auto;
-    text-align: center;
-  }
-  .photo img {
-    width: 75%;
-    padding: 160px 40px 40px 40px;
+    max-width: 48em;
   }
   footer {
-    margin-top: auto; /* Pousse le footer vers le bas de la page */
     max-width: 100%;
     position: relative;
   }
@@ -121,10 +102,9 @@ body {
     gap: 6em;
   }
   footer .copyright-info a {
-    font-size: 13px;
+    font-size: 0.8125;
   }
   .copyright-info {
-    font-size: 12px;
     flex-direction: column;
     align-items: center;
   }
@@ -134,7 +114,7 @@ body {
 @media (max-width: 768px) {
   body,
   .intro .presentation-span {
-    font-size: 15px;
+    font-size: 0.9375em;
   }
   .lien-page-header .tarif-contact-avis,
   .lien-page-header .lien-connect,
@@ -144,10 +124,9 @@ body {
   }
   header .hamburger {
     display: block;
-    font-size: 30px;
+    font-size: 1.875em;
     cursor: pointer;
     color: #fff;
-    position: absolute;
     top: 110px;
     right: 30px;
     z-index: 1000;
@@ -225,15 +204,6 @@ body {
   .presentation {
     max-width: 350px;
   }
-  .liste-domaines {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 16px;
-  }
-  .liste-domaines-list-1 {
-    margin-right: 40px;
-  }
   .photo {
     margin-top: 200px;
     width: 90%;
@@ -280,27 +250,36 @@ body {
 @media (max-width: 360px) {
   body,
   .intro .presentation-span {
-    font-size: 14px;
+    font-size: 0.99em;
+    text-align: center;
   }
   header .hamburger {
     top: 110px;
     right: 30px;
   }
   .intro h1 {
-    font-size: 18px;
+    font-size: 0.9em;
   }
   .intro h2 {
-    font-size: 17px;
+    font-size: 0.9em;
   }
-  header .hamburger {
-    top: 110px;
+  .presentation {
+    font-size: 0.9em;
   }
   .photo img {
-    width: 100%;
+    width: 90%;
     height: auto;
+    padding-top: 10em;
   }
   .lien-page-footer {
-    height: 43em;
+    height: 41em;
+  }
+  /* .definition-pratique ul {
+    flex-direction: column;
+    gap: 3em;
+  } */
+  .copyright-info {
+    font-size: 0.7em;
   }
 }
 
@@ -312,13 +291,16 @@ body {
 header {
   text-align: center;
   line-height: 0.5;
-  position: relative;
   width: 100%;
   height: auto;
 }
 
 .hamburger {
   display: none;
+  position: absolute;
+  top: 110px;
+  right: 30px;
+  z-index: 1000;
 }
 
 .lien-page-header {

@@ -18,6 +18,24 @@
     flex-direction: column-reverse;
     padding-bottom: 10px;
   }
+  .photo {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .photo img {
+    width: 75%;
+    height: auto;
+    padding-top: 7em;
+  }
+  .liste-domaines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .liste-domaines-list-1 {
+    margin-right: 40px;
+  }
 }
 
 /* Petites tablettes et grands téléphones */
@@ -25,6 +43,24 @@
   .lien-page-header {
     flex-direction: column-reverse;
     padding: 15px 0;
+  }
+  .liste-domaines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .liste-domaines-list-1 {
+    margin-right: 40px;
+  }
+}
+
+/* Téléphones portables */
+@media (max-width: 360px) {
+  .liste-domaines {
+    font-size: 0.82em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -98,7 +134,7 @@
 
 .liste-domaines span {
   display: block;
-  font-size: 19px;
+  font-size: 1.34em;
   font-weight: 600;
   margin: 20px 0;
 }
