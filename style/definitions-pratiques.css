@@ -17,7 +17,7 @@
  * ---------------------------- 
 */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+/* @media (min-width: 768px) and (max-width: 1024px) {
   .lien-page-header {
     flex-direction: column;
     padding-bottom: 10px;
@@ -67,7 +67,7 @@
     width: 100%;
     height: 600px;
   }
-}
+} */
 
 /* Petites tablettes et grands téléphones */
 @media (max-width: 768px) {
@@ -81,10 +81,6 @@
   }
   .circle-1-2 {
     margin-top: 10px;
-  }
-  .section1-col1 {
-    margin: 0;
-    padding: 0;
   }
   .section-presentation {
     padding-bottom: 130px;
@@ -102,11 +98,14 @@
   .photo-body-1.show,
   .photo-body-2.show,
   .photo-body-3.show {
+    width: 100%;
+    height: auto;
     padding: 26px;
   }
   .photo-body-4.show {
-    padding: 40px;
-    margin-top: 25px;
+    width: 90%;
+    height: auto;
+    padding-top: 3em;
   }
 }
 
@@ -115,11 +114,38 @@
   header .hamburger {
     top: 102px;
   }
+  .lien-page-header {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .back-home {
+    margin-bottom: 11px;
+    margin-left: 11px;
+  }
+  .circle-1-2 {
+    margin-top: 10px;
+  }
   .presentation.show {
-    padding: 15px 30px;
+    width: 100%;
+  }
+  .presentation-text-content {
+    line-height: 25px;
+  }
+  .photo {
+    margin: 0;
+    padding: 0;
+  }
+  .photo-body-1.show,
+  .photo-body-2.show,
+  .photo-body-3.show {
+    width: 100%;
+    height: auto;
+    padding: 26px;
   }
   .photo-body-4.show {
-    padding: 30px;
+    width: 90%;
+    height: auto;
+    padding-top: 3em;
   }
 }
 

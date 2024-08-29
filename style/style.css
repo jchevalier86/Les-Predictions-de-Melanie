@@ -36,6 +36,9 @@ body {
   .intro .presentation-span {
     font-size: 0.9375em;
   }
+  .photo-header {
+    height: auto;
+  }
   .lien-page-header .navbar .dropdown-content a {
     color: #fff;
   }
@@ -115,6 +118,9 @@ body {
   body,
   .intro .presentation-span {
     font-size: 0.9375em;
+  }
+  header .photo-header {
+    height: auto;
   }
   .lien-page-header .tarif-contact-avis,
   .lien-page-header .lien-connect,
@@ -253,6 +259,9 @@ body {
     font-size: 0.99em;
     text-align: center;
   }
+  header .photo-header {
+    height: auto;
+  }
   header .hamburger {
     top: 110px;
     right: 30px;
@@ -384,7 +393,7 @@ header {
 
 .photo-header {
   width: 100%;
-  height: auto;
+  height: 12em;
 }
 
 .tarif-contact-avis {
