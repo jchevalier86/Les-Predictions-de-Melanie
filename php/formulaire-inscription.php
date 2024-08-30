@@ -38,7 +38,9 @@
 <body>
   <header>
     <!-- Image de l'en-tête avec un logo ou une photo, représentative du site -->
-    <img class="photo-header" src="../images/melanie-voyante-2.jpg" alt="Logo de Mélanie Voyante">
+    <div class="parallax">
+      <!-- <img class="photo-header" src="../images/melanie-voyante-2.jpg" alt="Logo de Mélanie Voyante"> -->
+    </div>
 
     <!-- Navigation pour la page d'inscription avec un lien de retour à l'accueil -->
 
@@ -173,17 +175,19 @@
         <li><a href="./formulaire-connexion.php"> Connexion </a></li>
       </ul>
 
-      <ul>
-        <li><a href="../html/definition-voyance.html"> Définition voyance </a></li>
-        <li><a href="../html/definition-cartomancie.html"> Définition cartomancie </a></li>
-        <li><a href="../html/definition-ressenti-photo.html"> Définition ressenti photo </a></li>
-      </ul>
+      <div class="definition-pratique">
+        <ul>
+          <li><a href="../html/definition-voyance.html"> Définition voyance </a></li>
+          <li><a href="../html/definition-cartomancie.html"> Définition cartomancie </a></li>
+          <li><a href="../html/definition-ressenti-photo.html"> Définition ressenti photo </a></li>
+        </ul>
 
-      <ul>
-        <li><a href="../html/pratique-voyance.html"> Pratique voyance </a></li>
-        <li><a href="../html/pratique-cartomancie.html"> Pratique cartomancie </a></li>
-        <li><a href="../html/pratique-ressenti-photo.html"> Pratique ressenti photo </a></li>
-      </ul>
+        <ul>
+          <li><a href="../html/pratique-voyance.html"> Pratique voyance </a></li>
+          <li><a href="../html/pratique-cartomancie.html"> Pratique cartomancie </a></li>
+          <li><a href="../html/pratique-ressenti-photo.html"> Pratique ressenti photo </a></li>
+        </ul>
+    </div>
 
       <ul>
         <li><a href="./formulaire-avis.php"> Avis </a></li>

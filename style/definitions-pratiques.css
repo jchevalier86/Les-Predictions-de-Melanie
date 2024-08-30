@@ -86,7 +86,7 @@
     padding-bottom: 130px;
   }
   .presentation.show {
-    padding: 30px 30px;
+    padding: 30px 0;
   }
   .presentation-text-content {
     line-height: 30px;
@@ -98,7 +98,7 @@
   .photo-body-1.show,
   .photo-body-2.show,
   .photo-body-3.show {
-    width: 100%;
+    width: 50%;
     height: auto;
     padding: 26px;
   }
@@ -138,7 +138,7 @@
   .photo-body-1.show,
   .photo-body-2.show,
   .photo-body-3.show {
-    width: 100%;
+    width: 50%;
     height: auto;
     padding: 26px;
   }
@@ -179,9 +179,10 @@
 }
 
 .photo-body-1 {
-  height: 354px;
-  width: 430px;
-  padding-top: 68px;
+  height: 290px;
+  width: 390px;
+  border-radius: 10%;
+  margin-top: 64px;
 }
 
 .photo-body-2 {
@@ -213,6 +214,7 @@
 
 .section1-col1 {
   display: flex;
+  padding-top: 2em;
 }
 
 .presentation {

@@ -18,16 +18,6 @@
     flex-direction: column-reverse;
     padding-bottom: 10px;
   }
-  .photo {
-    width: 100%;
-    height: auto;
-    text-align: center;
-  }
-  .photo img {
-    width: 75%;
-    height: auto;
-    padding-top: 7em;
-  }
   .liste-domaines {
     display: flex;
     flex-direction: column;
@@ -35,6 +25,9 @@
   }
   .liste-domaines-list-1 {
     margin-right: 40px;
+  }
+  .photo-body {
+    padding: 4em;
   }
 }
 
@@ -52,6 +45,9 @@
   .liste-domaines-list-1 {
     margin-right: 40px;
   }
+  .photo-body {
+    padding: 4em;
+  }
 }
 
 /* Téléphones portables */
@@ -62,6 +58,11 @@
     flex-direction: column;
     align-items: center;
   }
+  .photo-body {
+    width: 85%;
+    border-radius: 20%;
+    padding: 4em;
+  }
 }
 
 /* 
@@ -71,13 +72,13 @@
 */
 
 .intro {
-  background: linear-gradient(90deg, #ffffff, #f32bf3);
+  background: linear-gradient(90deg, #fff, #f32bf3);
 }
 
 .section-presentation {
-  padding: 20px;
   display: flex;
   justify-content: center;
+  padding-top: 3em;
 }
 
 .presentation {
@@ -114,9 +115,24 @@
   transform: translateY(0);
 }
 
+.photo-body {
+  width: 440px;
+  height: 400px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1.05);
+  transition: opacity 3s ease-out, transform 3s ease-out;
+}
+
 .photo-body.show {
   opacity: 1;
   transform: scale(1);
+  margin: 60px 0;
+  object-fit: cover;
+  object-position: right;
 }
 
 .liste-domaines {
@@ -154,12 +170,4 @@
 
 .liste-domaines-list-1 {
   margin-right: 70px;
-}
-
-.photo-body {
-  height: 465px;
-  max-width: 470px;
-  padding-top: 75px;
-  transform: scale(1.05);
-  transition: opacity 3s ease-out, transform 3s ease-out;
 }
