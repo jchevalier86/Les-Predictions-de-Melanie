@@ -109,7 +109,7 @@ body {
 } */
 
 /* Petites tablettes et grands téléphones */
-@media (max-width: 360px) {
+@media (max-width: 768px) {
   body,
   .intro .presentation-span {
     font-size: 0.9em;
@@ -206,27 +206,15 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  .photo {
-    margin-top: 200px;
-    width: 90%;
-    height: auto;
-    text-align: center;
-  }
-  .photo img {
-    padding: 0;
-    margin: 0;
-    width: 60%;
-    height: auto;
-  }
   .photo-body-1 img,
   .photo-body-2 img {
     width: 78px;
     height: auto;
     padding: 40px 0 30px 0;
   }
-  .lien-page-footer {
+  /* .lien-page-footer {
     height: 42em;
-  }
+  } */
   footer .nav-links-2,
   footer .definition-pratique {
     flex-direction: column;
@@ -265,11 +253,14 @@ body {
   .intro .separator {
     width: 40%;
   }
-  .lien-page-footer {
-    height: 41em;
-  }
+  /* .lien-page-footer {
+    height: 57em;
+  } */
   .copyright-info {
     font-size: 0.7em;
+  }
+  footer .copyright-info a {
+    font-size: 1.1em;
   }
 }
 
@@ -468,11 +459,14 @@ h2 {
 
 footer {
   background: linear-gradient(90deg, rgb(15, 0, 146), rgb(176, 0, 176));
+  padding: 0;
+  margin: 0;
 }
 
 .lien-page-footer {
   line-height: 1.4;
   width: 100%;
+  height: auto;
 }
 
 .nav-links-1 {

@@ -58,9 +58,6 @@ body {
   .liste-domaines-list-1 {
     margin-right: 40px;
   }
-  .photo-body {
-    padding: 4em;
-  }
 }
 
 /* Téléphones portables */
@@ -75,6 +72,14 @@ body {
   section .liste-domaines-conteneur {
     display: flex;
     gap: 0;
+  }
+  .photo {
+    margin-top: 200px;
+  }
+  .photo img {
+    width: 157px;
+    height: 142px;
+    padding: 0;
   }
 }
 
