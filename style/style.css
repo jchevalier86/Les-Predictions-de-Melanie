@@ -35,10 +35,6 @@ body {
   body,
   .intro .presentation-span {
     font-size: 0.9375em;
-    text-align: center;
-  }
-  .photo-header {
-    height: auto;
   }
   .lien-page-header .navbar .dropdown-content a {
     color: #fff;
@@ -89,6 +85,9 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  /* .presentation-span {
+    text-align: center;
+  } */
   .presentation {
     max-width: 48em;
   }
@@ -117,11 +116,12 @@ body {
   body,
   .intro .presentation-span {
     font-size: 0.9375em;
-    text-align: center;
   }
-  header .photo-header {
-    height: auto;
+  header .parallax {
+    height: 13vh;
+    overflow: hidden;
   }
+  .lien-page-header .dropdown,
   .lien-page-header .tarif-contact-avis,
   .lien-page-header .lien-connect,
   .lien-page-header .lien-deconnect,
@@ -133,10 +133,11 @@ body {
     font-size: 1.875em;
     cursor: pointer;
     color: #fff;
-    top: 110px;
-    right: 30px;
+    top: 2.7em;
+    right: 12em;
     z-index: 1000;
   }
+  .lien-page-header.active .dropdown,
   .lien-page-header.active .tarif-contact-avis,
   .lien-page-header.active .lien-connect,
   .lien-page-header.active .lien-deconnect,
@@ -145,8 +146,12 @@ body {
     align-items: center;
     justify-content: center;
   }
-  .lien-page-header.active .navbar {
-    display: none;
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar .dropdown-content {
+    display: block;
   }
   .lien-page-header .navbar .dropdown-content a {
     color: #fff;
@@ -154,17 +159,13 @@ body {
   .lien-page-header .navbar .dropdown-content a:hover {
     color: #000;
   }
-  .lien-page-header {
-    padding-bottom: 10px;
-  }
   .navbar {
-    display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 40%;
   }
   .navbar .dropdown-content {
     position: static;
-    width: 100%;
+    width: 50%;
   }
   .navbar .dropdown-content a {
     text-align: center;
@@ -207,6 +208,9 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  /* .presentation-span {
+    text-align: center;
+  } */
   .presentation {
     max-width: 350px;
   }
@@ -255,15 +259,19 @@ body {
   body,
   .intro .presentation-span {
     font-size: 0.99em;
-    text-align: center;
   }
-  header .photo-header {
-    height: auto;
+  header .parallax {
+    height: 13vh;
+    overflow: hidden;
+    position: relative;
   }
   header .hamburger {
-    top: 110px;
+    top: 76px;
     right: 30px;
   }
+  /* .presentation-span {
+    text-align: center;
+  } */
   .intro h1,
   .intro h2,
   .presentation {
