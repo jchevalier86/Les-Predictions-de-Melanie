@@ -38,11 +38,6 @@
 <body>
     <!-- En-tête de la page -->
     <header>
-        <!-- Image de l'en-tête -->
-        <div class="parallax">
-            <!-- <img class="photo-header" src="../images/melanie-voyante-2.jpg" alt="Logo de Mélanie Voyante"> -->
-        </div>
-
         <!-- Navigation pour retourner à la page d'accueil -->
         <nav class="lien-page-inscription">
 

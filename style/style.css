@@ -31,7 +31,7 @@ body {
  * ---------------------------- 
 */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+/* @media (min-width: 768px) and (max-width: 1024px) {
   body,
   .intro .presentation-span {
     font-size: 0.9375em;
@@ -85,9 +85,6 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  /* .presentation-span {
-    text-align: center;
-  } */
   .presentation {
     max-width: 48em;
   }
@@ -109,17 +106,19 @@ body {
     flex-direction: column;
     align-items: center;
   }
-}
+} */
 
 /* Petites tablettes et grands téléphones */
-@media (max-width: 768px) {
+@media (max-width: 360px) {
   body,
   .intro .presentation-span {
-    font-size: 0.9375em;
+    font-size: 0.9em;
   }
   header .parallax {
     height: 13vh;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
   }
   .lien-page-header .dropdown,
   .lien-page-header .tarif-contact-avis,
@@ -133,9 +132,9 @@ body {
     font-size: 1.875em;
     cursor: pointer;
     color: #fff;
-    top: 2.7em;
-    right: 12em;
-    z-index: 1000;
+    position: fixed;
+    top: 0.6em;
+    z-index: 1001;
   }
   .lien-page-header.active .dropdown,
   .lien-page-header.active .tarif-contact-avis,
@@ -147,7 +146,6 @@ body {
     justify-content: center;
   }
   .dropdown {
-    display: flex;
     flex-direction: column;
   }
   .navbar .dropdown-content {
@@ -208,12 +206,6 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  /* .presentation-span {
-    text-align: center;
-  } */
-  .presentation {
-    max-width: 350px;
-  }
   .photo {
     margin-top: 200px;
     width: 90%;
@@ -256,31 +248,22 @@ body {
 
 /* Téléphones portables */
 @media (max-width: 360px) {
-  body,
-  .intro .presentation-span {
-    font-size: 0.99em;
-  }
-  header .parallax {
-    height: 13vh;
-    overflow: hidden;
-    position: relative;
-  }
   header .hamburger {
     top: 76px;
     right: 30px;
   }
-  /* .presentation-span {
-    text-align: center;
-  } */
-  .intro h1,
-  .intro h2,
-  .presentation {
+  .intro {
+    width: 290px;
+    margin: 90px auto;
+  }
+  .intro h1 {
+    font-size: 1em;
+  }
+  .intro h2 {
     font-size: 0.9em;
   }
-  .photo img {
-    width: 90%;
-    height: auto;
-    padding-top: 10em;
+  .intro .separator {
+    width: 40%;
   }
   .lien-page-footer {
     height: 41em;
@@ -311,6 +294,13 @@ header {
   height: 44vh;
   width: 100%;
   overflow: hidden;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .hamburger {
@@ -438,41 +428,18 @@ header {
   cursor: pointer;
 }
 
-.circle-1 {
-  width: 20px;
-  height: 20px;
-  background: linear-gradient(90deg, #fff, #f32bf3);
-  border-radius: 50%;
-}
-
-.circle-2 {
-  width: 20px;
-  height: 20px;
-  background: linear-gradient(90deg, #fff, #00b5fd);
-  border-radius: 50%;
-}
-
-.circle-1:hover,
-.circle-2:hover {
-  cursor: pointer;
-}
-
-.circle-1-2 {
-  display: flex;
-  overflow-x: hidden;
-}
-
 /* --------------------------- 
  * Main 
  * ---------------------------- 
 */
 
 h1 {
+  color: #6a0dad;
   font-size: 30px;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 3em;
 }
 
 h2 {
@@ -518,9 +485,7 @@ footer {
 .social-link,
 .lien-connect,
 .lien-deconnect,
-.lien-home,
-.circle-1-pink,
-.circle-2-blue {
+.lien-home {
   position: relative;
   display: inline-block;
   margin-right: 10px;
@@ -529,9 +494,7 @@ footer {
 .insta-paypal-mail,
 .connect,
 .deconnect,
-.home,
-.circle-pink,
-.circle-blue {
+.home {
   visibility: hidden;
   background-color: #555;
   color: #fff;
@@ -540,7 +503,7 @@ footer {
   padding: 5px 10px;
   position: absolute;
   z-index: 1;
-  bottom: 125%;
+  top: 125%;
   left: 50%;
   margin-left: -60px;
   opacity: 0;
@@ -551,9 +514,7 @@ footer {
 .social-link:hover .insta-paypal-mail,
 .lien-connect:hover .connect,
 .lien-deconnect:hover .deconnect,
-.lien-home:hover .home,
-.circle-1-pink:hover .circle-pink,
-.circle-2-blue:hover .circle-blue {
+.lien-home:hover .home {
   visibility: visible;
   opacity: 1;
 }

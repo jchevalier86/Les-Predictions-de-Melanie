@@ -13,6 +13,18 @@
 }
 
 /* --------------------------- 
+ * Body 
+ * ---------------------------- 
+*/
+
+body {
+  background-image: url(../images/melanie-voyante-1.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* --------------------------- 
  * Responsive Design 
  * ---------------------------- 
 */
@@ -166,60 +178,54 @@
 */
 
 .intro {
-  background: linear-gradient(90deg, #ffffff, #f32bf3);
+  width: 675px;
+  margin: 90px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Style pour les photos */
 .photo-body-1,
 .photo-body-2,
-.photo-body-3,
-.photo-body-4 {
+.photo-body-3 {
   transform: scale(1.05);
   transition: opacity 3s ease-out, transform 3s ease-out;
+  border-radius: 10px;
 }
 
 .photo-body-1 {
-  height: 290px;
   width: 390px;
-  border-radius: 10%;
-  margin-top: 64px;
+  height: 290px;
 }
 
 .photo-body-2 {
-  height: 329px;
   width: 420px;
-  padding-top: 67px;
+  height: 329px;
 }
 
 .photo-body-3 {
-  height: 559px;
-  width: 380px;
-  padding-top: 68px;
+  width: 100%;
+  height: auto;
 }
 
-.photo-body-4 {
-  height: 768px;
-  width: 500px;
-  padding-top: 66px;
-  padding-left: 56px;
-}
-
-/* Section présentation */
 .section-presentation {
   padding-bottom: 130px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
 }
 
 .section1-col1 {
   display: flex;
-  padding-top: 2em;
+  flex-direction: column;
+  align-items: center;
 }
 
 .presentation {
   padding: 40px 25px;
-  width: 550px;
+  width: 100%;
   line-height: 23px;
 }
 
@@ -237,8 +243,7 @@
 .presentation.show .presentation-span,
 .photo-body-1.show,
 .photo-body-2.show,
-.photo-body-3.show,
-.photo-body-4.show {
+.photo-body-3.show {
   opacity: 1;
   transform: translateY(0) scale(1);
 }

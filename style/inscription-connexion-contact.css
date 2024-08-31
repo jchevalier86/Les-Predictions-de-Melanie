@@ -24,7 +24,6 @@
 */
 
 body {
-  font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   background-image: url(../images/etoile-filante.jpeg);
   background-attachment: fixed;
@@ -66,20 +65,19 @@ body {
 }
 
 /* Petites tablettes et grands téléphones */
-@media (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .lien-page-header {
     flex-direction: column;
   }
   .back-home {
     margin-bottom: 10px;
-    margin-left: 10px;
-    width: 70%;
+    width: 71%;
   }
   .icone-connect {
     margin-top: 10px;
   }
   .title {
-    font-size: 20px;
+    font-size: 16px;
   }
   .container,
   .container-2 {
@@ -95,18 +93,15 @@ body {
 }
 
 /* Téléphones portables */
-@media (max-width: 360px) {
+/* @media (max-width: 360px) {
   .back-home {
     margin-bottom: 10px;
-  }
-  .title {
-    font-size: 18px;
   }
   .container,
   .container-2 {
     max-width: 80%;
   }
-}
+} */
 
 /* 
   * ------------------------ 
@@ -127,11 +122,6 @@ body {
   background: linear-gradient(90deg, rgb(15, 0, 146), rgb(176, 0, 176));
 }
 
-/* 
-  * Style du titre dans l'en-tête, 
-  * couleur blanche et police différente pour se démarquer.
-*/
-
 .title {
   color: #ffffff;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -144,17 +134,12 @@ body {
   * ------------------------ 
 */
 
-/* 
-  * Conteneur principal pour le formulaire, 
-  * avec une largeur maximale définie, centrée horizontalement.
-  * Ajout de marges et de padding, d'un fond blanc, 
-  * des coins arrondis et une ombre pour l'effet de carte.
-*/
-
 .container,
 .container-2 {
   width: 350px;
   margin: 30px auto;
+  margin-top: 110px;
+  margin-bottom: 70px;
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -165,11 +150,6 @@ body {
   overflow: scroll;
 }
 
-/* 
-  * Style du titre secondaire (h2) dans le conteneur,
-  * avec une taille de police et une couleur définies, et un centrage du texte.
-*/
-
 h2 {
   font-size: 24px;
   color: #333;
@@ -177,30 +157,15 @@ h2 {
   padding-bottom: 20px;
 }
 
-/* 
-  * Ajout d'une marge supérieure au formulaire pour espacer du titre.
-*/
-
 form {
   margin-top: 10px;
 }
-
-/* 
-  * Style des labels des champs de formulaire,
-  * avec une marge inférieure pour espacer du champ et une couleur de texte gris.
-*/
 
 label {
   display: block;
   margin-bottom: 8px;
   color: #666;
 }
-
-/* 
-  * Style des champs de saisie du formulaire, 
-  * avec une largeur de 100%, padding, marges inférieures,
-  * bordure grise, coins arrondis et une taille de police définie.
-*/
 
 select,
 input[type="text"],
@@ -215,13 +180,6 @@ input[type="password"] {
   border-radius: 4px;
   font-size: 13.5px;
 }
-
-/* 
-  * Style du bouton de soumission, 
-  * avec une couleur de fond violet, texte blanc, padding,
-  * sans bordure, coins arrondis, curseur en forme de pointeur, 
-  * taille de police définie et largeur de 100%.
-*/
 
 input[type="submit"] {
   background-color: #6a0dad;
@@ -244,19 +202,9 @@ select:hover {
   cursor: pointer;
 }
 
-/* 
-  * Changement de couleur de fond du bouton lors du survol, 
-  * pour un effet visuel interactif.
-*/
-
 button:hover {
   background-color: #4f0a68;
 }
-
-/* 
-  * La classe star pour ajouter une couleur rouge aux éléments, 
-  * souvent utilisée pour indiquer les champs obligatoires.
-*/
 
 .star {
   color: red;

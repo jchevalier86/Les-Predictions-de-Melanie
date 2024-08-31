@@ -17,7 +17,6 @@
 */
 
 body {
-  font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   background-image: url(../images/astrologie.jpg);
   background-size: cover;
@@ -101,8 +100,8 @@ body {
   background-color: #fff;
   padding: 20px;
   padding-bottom: 70px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 110px;
+  margin-bottom: 70px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

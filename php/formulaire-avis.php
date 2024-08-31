@@ -42,12 +42,8 @@
 </head>
 
 <body>
+  <!-- En-tête de la page -->
   <header>
-    <!-- Image de l'en-tête avec un logo ou une photo, représentative du site -->
-    <div class="parallax">
-      <!-- <img class="photo-header" src="../images/melanie-voyante-2.jpg" alt="Logo de Mélanie Voyante"> -->
-    </div>
-
     <!-- Ajout du bouton hamburger -->
     <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
 
