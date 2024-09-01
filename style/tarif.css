@@ -17,6 +17,18 @@
 }
 
 /* --------------------------- 
+ * Body 
+ * ---------------------------- 
+*/
+
+body {
+  background-image: url(../images/melanie-voyante-1.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* --------------------------- 
  * Responsive Design 
  * ---------------------------- 
 */
@@ -68,15 +80,23 @@
   * ----------------------------
 */
 
+.intro {
+  max-width: 675px;
+  margin: 90px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .section-presentation {
-  padding: 20px;
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8em;
 }
 
 .section1-col1 {
-  display: flex;
+  margin-top: 35px;
 }
 
 .presentation {

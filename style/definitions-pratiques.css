@@ -13,18 +13,6 @@
 }
 
 /* --------------------------- 
- * Body 
- * ---------------------------- 
-*/
-
-body {
-  background-image: url(../images/melanie-voyante-1.jpeg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-}
-
-/* --------------------------- 
  * Responsive Design 
  * ---------------------------- 
 */
@@ -178,7 +166,7 @@ body {
 */
 
 .intro {
-  width: 675px;
+  max-width: 675px;
   margin: 90px auto;
   background-color: #fff;
   border-radius: 8px;
@@ -189,32 +177,66 @@ body {
 .photo-body-1,
 .photo-body-2,
 .photo-body-3 {
+  margin: 80px 0;
+}
+
+.photo-body-1,
+.photo-body-2,
+.photo-body-3,
+.photo-body-1-pratique,
+.photo-body-2-pratique,
+.photo-body-3-pratique {
   transform: scale(1.05);
   transition: opacity 3s ease-out, transform 3s ease-out;
   border-radius: 10px;
 }
 
-.photo-body-1 {
+.photo-body-1,
+.photo-body-1-pratique {
   width: 390px;
   height: 290px;
 }
 
-.photo-body-2 {
+.photo-body-2,
+.photo-body-2-pratique {
   width: 420px;
   height: 329px;
 }
 
-.photo-body-3 {
-  width: 100%;
+.photo-body-3,
+.photo-body-3-pratique {
+  width: 60%;
   height: auto;
+  margin-bottom: 3em;
+}
+
+.photo-body-3 {
+  margin-top: 9em;
+}
+
+.photo .photo-body-3 {
+  margin-left: 8em;
+}
+
+.photo-body-1-pratique,
+.photo-body-2-pratique {
+  margin-top: 31em;
+  margin-bottom: 3em;
+}
+
+.photo-body-3-pratique {
+  margin-top: 25em;
+}
+
+.photo .photo-body-3-pratique {
+  margin-left: 8em;
 }
 
 .section-presentation {
-  padding-bottom: 130px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 8em;
 }
 
 .section1-col1 {
@@ -224,8 +246,9 @@ body {
 }
 
 .presentation {
-  padding: 40px 25px;
-  width: 100%;
+  padding: 25px;
+  max-width: 550px;
+  height: 300px;
   line-height: 23px;
 }
 
@@ -243,7 +266,10 @@ body {
 .presentation.show .presentation-span,
 .photo-body-1.show,
 .photo-body-2.show,
-.photo-body-3.show {
+.photo-body-3.show,
+.photo-body-1-pratique.show,
+.photo-body-2-pratique.show,
+.photo-body-3-pratique.show {
   opacity: 1;
   transform: translateY(0) scale(1);
 }

@@ -1,0 +1,25 @@
+/* style sur les pages définitions et pratiques */
+
+/* --------------------------- 
+ * Global Reset
+ * ---------------------------- 
+*/
+
+/* Applique box-sizing à tous les éléments */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* --------------------------- 
+ * Body 
+ * ---------------------------- 
+*/
+
+body {
+  background-image: url(../images/clairvoyance.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}

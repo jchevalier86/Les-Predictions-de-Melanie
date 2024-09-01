@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="../style/reset.css">
   <link rel="stylesheet" href="../style/style.css">
   <link rel="stylesheet" href="../style/horoscope-jour-hebdo.css">
+  <link rel="stylesheet" href="../style/horoscope-hebdo.css">
 
   <!-- Favicon pour le site -->
   <link rel="shortcut icon" href="../images/favicon-6.ico" type="image/x-icon">

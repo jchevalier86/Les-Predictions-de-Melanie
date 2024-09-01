@@ -1,0 +1,29 @@
+/* --------------------------- 
+ * Global Reset
+ * ---------------------------- 
+*/
+
+/* Applique la règle box-sizing: border-box à tous les éléments, y compris ::before et ::after */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* --------------------------- 
+ * Body 
+ * ---------------------------- 
+*/
+
+body {
+  background-image: url(../images/horoscope-hebdomadaire.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #f4f4f4;
+  height: 100vh;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
