@@ -33,6 +33,9 @@
 
 <body>
   <header>
+    <div class="parallax">
+    </div>
+
     <!-- Ajout du bouton hamburger -->
     <div class="hamburger" onclick="toggleMenu()"> &#9776; </div>
 

@@ -137,9 +137,7 @@ body {
 .container,
 .container-2 {
   width: 350px;
-  margin: 30px auto;
-  margin-top: 110px;
-  margin-bottom: 70px;
+  margin: 70px auto;
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
