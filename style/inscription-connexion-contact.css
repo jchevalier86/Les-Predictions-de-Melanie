@@ -93,7 +93,7 @@ body {
 }
 
 /* Téléphones portables */
-/* @media (max-width: 360px) {
+@media (max-width: 360px) {
   .back-home {
     margin-bottom: 10px;
   }
@@ -101,18 +101,12 @@ body {
   .container-2 {
     max-width: 80%;
   }
-} */
+}
 
 /* 
   * ------------------------ 
   * Header 
   * ------------------------ 
-*/
-
-/* 
-  * Style de la navigation dans l'en-tête. 
-  * Centrage horizontal et vertical des éléments à l'intérieur,
-  * avec une couleur de fond rose transparent.
 */
 
 .lien-page-inscription {
@@ -144,9 +138,9 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.container {
+/* .container {
   overflow: scroll;
-}
+} */
 
 h2 {
   font-size: 24px;

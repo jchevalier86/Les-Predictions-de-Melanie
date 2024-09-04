@@ -245,14 +245,15 @@
   <script src="../script/script.js"></script>
   <script src="../script/menu-hamburger.js"></script>
 
-  <?php
+</body>
+
+<?php
     if (isset($_SESSION['errorMessages'])) {
       unset($_SESSION['errorMessages']);
     }
     if (isset($_SESSION['successMessages'])) {
         unset($_SESSION['successMessages']);
     }
-  ?>
-</body>
+?>
 
 </html>

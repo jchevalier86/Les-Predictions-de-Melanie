@@ -19,12 +19,16 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 /* --------------------------- 
  * Responsive Design 
  * ---------------------------- */
 
+/* Tablettes et petits écrans */
 @media (min-width: 768px) and (max-width: 1024px) {
   .lien-page-header {
     padding-bottom: 10px;
@@ -38,67 +42,59 @@ body {
   .photo img {
     width: 300px;
     height: 272px;
-    padding: 0;
   }
 }
 
 /* Petites tablettes et grands téléphones */
 @media (max-width: 768px) {
-  .lien-page-header {
-    display: flex;
-    flex-direction: column;
-    padding-top: 3em;
-  }
   .liste-domaines .liste-domaines-conteneur {
     gap: 0;
   }
-  .liste-domaines,
-  .intro .presentation-span {
-    font-size: 0.8em;
-  }
   .liste-domaines-list-1 {
-    margin-right: 40px;
+    margin-right: 20px;
   }
-  .photo {
-    margin-top: 110px;
-  }
+  /* .photo {
+    margin-top: 35px;
+  } */
   .photo img {
     width: 215px;
     height: 188px;
-    padding: 0;
   }
 }
 
 /* Téléphones portables */
 @media (max-width: 360px) {
-  header .hamburger {
-    top: 18px;
-    right: 30px;
-  }
   .intro .presentation-span {
-    padding-left: 4em;
+    padding-left: 3em;
   }
   .presentation {
     padding: 25px;
   }
   section .liste-domaines-conteneur {
-    display: flex;
-    gap: 0;
+    margin: 0 -1em;
+  }
+  .liste-domaines,
+  .intro .presentation-span,
+  .presentation-text-content {
+    font-size: 0.8em;
+  }
+  .intro .liste-domaines span {
+    font-size: 1.1em;
   }
   .photo {
-    margin-top: 200px;
+    height: auto;
+    margin-top: 35px;
   }
   .photo img {
+    display: block;
     width: 157px;
     height: 142px;
-    padding: 0;
   }
 }
 
-/* 
-  * --------------------------- 
-  * Main 
-  * ----------------------------
+/* --------------------------- 
+ * Main 
+ * ---------------------------- 
 */
 
 .intro {
@@ -107,6 +103,7 @@ body {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
 }
 
 .section1-col1 {
@@ -124,7 +121,7 @@ body {
   padding: 25px;
   max-width: 550px;
   height: 300px;
-  line-height: 23px;
+  line-height: 1.5;
 }
 
 .presentation-span {
@@ -154,12 +151,16 @@ body {
   transform: translateY(0);
 }
 
+.photo {
+  padding-top: 10px;
+}
+
 .photo-body {
-  width: 305px;
-  height: 295px;
+  max-width: 240px;
+  max-height: 230px;
+  height: 230px;
   border-radius: 50%;
   padding-top: 10px;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -13,17 +13,18 @@
 }
 
 /* --------------------------- 
- * Body 
+ * Body & HTML 
  * ---------------------------- 
 */
 
-body {
+body,
+html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden; /* Empêche tout débordement horizontal */
 }
 
 /* --------------------------- 
@@ -31,153 +32,54 @@ body {
  * ---------------------------- 
 */
 
-/* @media (min-width: 768px) and (max-width: 1024px) {
-  body,
-  .intro .presentation-span {
-    font-size: 0.9375em;
-  }
-  .lien-page-header .navbar .dropdown-content a {
-    color: #fff;
-  }
-  .lien-page-header .navbar .dropdown-content a:hover {
-    color: #000;
-  }
-  .navbar .dropdown-content {
-    position: static;
-    width: 100%;
-  }
-  .navbar .dropdown-content a {
-    text-align: center;
-  }
-  .icone-connect,
-  .circle-1-2 {
-    margin: 15px 0 12px 10px;
-  }
-  .icone-connect {
-    margin-top: 10px;
-  }
-  .lien-home {
-    margin: 10px 10px 0 0;
-  }
-  .intro .separator {
-    width: 30%;
-  }
-  .intro h1 {
-    font-size: 1.1875em;
-  }
-  .intro h2 {
-    font-size: 1.125em;
-  }
-  h1,
-  h2,
-  .presentation-text-content p,
-  .liste-domaines span,
-  ul {
-    text-align: justify;
-    hyphens: auto;
-  }
-  .section-presentation {
-    gap: 80px;
-  }
-  .section-presentation,
-  .section1-col1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .presentation {
-    max-width: 48em;
-  }
-  footer {
-    max-width: 100%;
-    position: relative;
-  }
-  .lien-page-footer {
-    letter-spacing: 0;
-  }
-  .nav-links-2 {
-    justify-content: center;
-    gap: 6em;
-  }
-  footer .copyright-info a {
-    font-size: 0.8125;
-  }
-  .copyright-info {
-    flex-direction: column;
-    align-items: center;
-  }
-} */
-
 /* Petites tablettes et grands téléphones */
 @media (max-width: 768px) {
   header .parallax {
     height: 13vh;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+  }
+  header .lien-page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 2em;
   }
   .lien-page-header .dropdown,
   .lien-page-header .tarif-contact-avis,
   .lien-page-header .lien-connect,
-  .lien-page-header .lien-deconnect,
-  .lien-page-header .circle-1-2 {
+  .lien-page-header .lien-deconnect {
     display: none;
   }
   header .hamburger {
     display: block;
-    font-size: 1.875em;
+    font-size: 1.7em;
     cursor: pointer;
     color: #fff;
-    position: fixed;
-    top: 0.6em;
-    z-index: 1001;
+    top: 2.6em;
   }
   .lien-page-header.active .dropdown,
   .lien-page-header.active .tarif-contact-avis,
   .lien-page-header.active .lien-connect,
-  .lien-page-header.active .lien-deconnect,
-  .lien-page-header.active .circle-1-2 {
+  .lien-page-header.active .lien-deconnect {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .dropdown {
-    flex-direction: column;
-  }
-  .navbar .dropdown-content {
     display: block;
-  }
-  .lien-page-header .navbar .dropdown-content a {
-    color: #fff;
-  }
-  .lien-page-header .navbar .dropdown-content a:hover {
-    color: #000;
   }
   .navbar {
     flex-direction: column;
-    width: 40%;
-  }
-  .navbar .dropdown-content {
-    position: static;
-    width: 50%;
-  }
-  .navbar .dropdown-content a {
-    text-align: center;
+    width: 100%;
   }
   .icone-connect,
   .circle-1-2 {
     margin-bottom: 15px;
     margin-left: 10px;
   }
-  .lien-home {
-    margin: 10px 10px 0 0;
-  }
   .tarif-contact-avis {
     display: flex;
     flex-direction: column;
   }
   .intro {
-    width: 95%;
+    width: 86%;
   }
   .intro .separator {
     width: 14%;
@@ -217,21 +119,32 @@ body {
 /* Téléphones portables */
 @media (max-width: 360px) {
   header .hamburger {
-    top: 76px;
-    right: 30px;
+    top: 3.2em;
+    right: 1em;
+    font-size: 1.5em;
   }
-  .intro {
-    width: 95%;
+  body .intro {
+    width: 86%;
     margin: 90px auto;
+    margin-top: 3em;
+  }
+  header .dropdown .dropbtn,
+  header .dropdown-content,
+  header .tarif-contact-avis a {
+    font-size: 0.8em;
   }
   .intro h1 {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   .intro h2 {
     font-size: 0.9em;
   }
   .intro .separator {
     width: 25%;
+  }
+  footer {
+    padding-bottom: 200px;
+    font-size: 14px;
   }
   .copyright-info {
     font-size: 0.7em;
@@ -249,8 +162,6 @@ body {
 header {
   text-align: center;
   line-height: 0.5;
-  width: 100%;
-  height: auto;
 }
 
 .parallax {
@@ -261,13 +172,9 @@ header {
   background-size: contain;
   height: 44vh;
   width: 100%;
-  overflow: hidden;
 }
 
 nav {
-  /* position: fixed;
-  top: 0;
-  z-index: 1000; */
   width: 100%;
 }
 
@@ -293,11 +200,9 @@ nav {
 
 .navbar {
   display: flex;
-  overflow: hidden;
 }
 
 .navbar a {
-  float: left;
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -311,7 +216,7 @@ nav {
 }
 
 .dropdown {
-  float: left;
+  position: relative;
 }
 
 .dropdown .dropbtn {
@@ -342,7 +247,6 @@ nav {
 }
 
 .dropdown-content a {
-  float: none;
   color: #fff;
   padding: 12px 16px;
   text-decoration: none;
@@ -352,16 +256,10 @@ nav {
 
 .dropdown-content a:hover {
   background-color: #fff;
-  text-decoration: none;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-.photo-header {
-  width: 100%;
-  height: 12em;
 }
 
 .tarif-contact-avis {
@@ -386,11 +284,7 @@ nav {
   padding: 14px 16px;
 }
 
-.icone-connect {
-  height: 20px;
-  cursor: pointer;
-}
-
+.icone-connect,
 .icone-deconnect {
   height: 20px;
   cursor: pointer;
@@ -436,14 +330,9 @@ h2 {
 
 footer {
   background: linear-gradient(90deg, rgb(15, 0, 146), rgb(176, 0, 176));
-  padding: 0;
-  margin: 0;
-}
-
-.lien-page-footer {
-  line-height: 1.4;
   width: 100%;
-  height: auto;
+  position: relative;
+  margin-top: auto;
 }
 
 .nav-links-1 {
@@ -517,14 +406,8 @@ a:hover {
 
 .logo-footer {
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   align-items: center;
-}
-
-.copyright-info a {
-  color: #000;
-  font-size: 16px;
-  font-weight: 400;
 }
 
 .copyright-info {
@@ -535,4 +418,10 @@ a:hover {
   margin-top: 40px;
   width: 100%;
   background-color: #fff;
+}
+
+.copyright-info a {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
 }
