@@ -52,6 +52,7 @@
     </nav>
   </header>
 
+  <main>
   <!-- Conteneur principal pour le formulaire d'inscription -->
   <div class="container">
     
@@ -133,6 +134,7 @@
       </div>
     </form>
   </div>
+      </main>
 
   <!-- Pied de page avec des liens vers les différentes pages du site -->
   <footer class="lien-page-footer">
@@ -145,6 +147,7 @@
           <span class="insta-paypal-mail"> Suivez-moi sur Instagram </span>
         </a>
       </div>
+      
       <div class="social-link">
         <a class="logo-footer" href="https://www.paypal.me/maupin20" target="_blank">
           <img src="../images/paypal.png" alt="Logo Paypal">

@@ -14,19 +14,30 @@
  * ---------------------------- 
 */
 
-body {
+body,
+html {
+  font-family: Arial, sans-serif;
   background-image: url(../images/accueil.png);
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* --------------------------- 
+body {
+  flex: 1; /* Permet de s'étendre pour occuper l'espace restant */
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------------------- 
  * Responsive Design 
- * ---------------------------- */
+ * ---------------------------- 
+*/
 
 /* Tablettes et petits écrans */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -47,25 +58,59 @@ body {
 
 /* Petites tablettes et grands téléphones */
 @media (max-width: 768px) {
+  section .section-presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
   .liste-domaines .liste-domaines-conteneur {
     gap: 0;
   }
   .liste-domaines-list-1 {
     margin-right: 20px;
   }
-  /* .photo {
-    margin-top: 35px;
-  } */
+  .intro .liste-domaines span {
+    font-size: 1.1em;
+  }
+  .photo {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .photo img {
     width: 215px;
     height: 188px;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: 1.1em;
+  }
+  .intro h2,
+  .intro span {
+    font-size: 1em;
+  }
+  .intro p,
+  .intro .presentation-span,
+  .intro .liste-domaines-conteneur {
+    font-size: 0.9em;
+  }
+  .intro .photo {
+    padding-top: 5em;
   }
 }
 
 /* Téléphones portables */
-@media (max-width: 360px) {
-  .intro .presentation-span {
-    padding-left: 3em;
+@media (min-width: 320px) and (max-width: 360px) {
+  section .section-presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
   }
   .presentation {
     padding: 25px;
@@ -82,13 +127,18 @@ body {
     font-size: 1.1em;
   }
   .photo {
-    height: auto;
-    margin-top: 35px;
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .photo img {
-    display: block;
     width: 157px;
     height: 142px;
+    display: block;
+  }
+  .intro .photo {
+    padding: 0;
   }
 }
 
@@ -103,11 +153,14 @@ body {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  flex: 1;
+  flex-grow: 1;
+  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .section1-col1 {
-  margin-top: 35px;
+  margin-top: 20px;
 }
 
 .section-presentation {
@@ -152,7 +205,7 @@ body {
 }
 
 .photo {
-  padding-top: 10px;
+  padding-top: 40px;
 }
 
 .photo-body {
