@@ -21,16 +21,13 @@ body,
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  display: block;
+  min-height: auto;
   margin: 0;
   padding: 0;
-  overflow: auto;
 }
 
 body {
-  flex: 1;
   display: flex;
   flex-direction: column;
 }
@@ -52,7 +49,7 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
-  height: 30vh;
+  height: 42vh;
   display: block;
 }
 
@@ -64,7 +61,7 @@ nav {
 .hamburger {
   display: none;
   position: absolute;
-  top: 110px;
+  top: 105px;
   right: 30px;
   z-index: 1;
 }
@@ -200,7 +197,7 @@ h2 {
   height: 2px;
   background-color: black;
   width: 20%;
-  margin: 30px auto;
+  margin: 20px auto;
 }
 
 .costum-word {
@@ -215,15 +212,14 @@ h2 {
 footer {
   background: linear-gradient(90deg, rgb(15, 0, 146), rgb(176, 0, 176));
   width: 100%;
-  margin-top: auto;
   padding: 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow-wrap: break-word;
-  flex-shrink: 0;
+  overflow-y: auto;
+  max-height: 140vh;
 }
 
 .nav-links-1,
@@ -273,10 +269,8 @@ footer {
   z-index: 1;
   top: 125%;
   left: 50%;
-  /* margin-left: -60px; */
   opacity: 0;
   transition: opacity 0.3s;
-  /* width: 120px; */
 }
 
 .social-link:hover .insta-paypal-mail,
@@ -320,7 +314,7 @@ a:hover,
   justify-content: center;
   gap: 20px;
   padding: 20px 10px;
-  margin-top: 40px;
+  margin-top: 20px;
   width: 100%;
   background-color: #fff;
   text-align: center;
@@ -338,13 +332,17 @@ a:hover,
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* header .parallax {
-    height: 40vh;
-  } */
+  .parallax {
+    height: 38vh;
+  }
   .lien-page-header {
-    flex-direction: row;
-    justify-content: space-between;
-    padding-bottom: 10px;
+    flex-direction: column-reverse;
+    padding: 20px 0;
+    margin: 0;
+  }
+  .icone-connect,
+  .icone-deconnect {
+    margin-bottom: 10px;
   }
   footer .nav-links-2 {
     flex-direction: row;
@@ -353,14 +351,31 @@ a:hover,
   }
 }
 
-/* Petites tablettes et grands téléphones */
-@media (max-width: 768px) {
+@media (max-width: 975px) {
   header .parallax {
-    height: 15vh;
-    background-attachment: fixed;
+    width: 100%;
+    height: 37vh;
   }
-  header .lien-page-header {
-    overflow: visible;
+}
+
+@media (max-width: 880px) {
+  header .parallax {
+    width: 100%;
+    height: 34vh;
+  }
+}
+
+@media (max-width: 805px) {
+  header .parallax {
+    width: 100%;
+    height: 30vh;
+  }
+}
+
+/* Petites tablettes et grands téléphones */
+@media (max-width: 767px) {
+  header .parallax {
+    height: 28vh;
   }
   header .tarif-contact-avis {
     display: flex;
@@ -374,10 +389,10 @@ a:hover,
   }
   header .hamburger {
     display: block;
-    font-size: 1.7em;
+    font-size: 2em;
     cursor: pointer;
     color: #fff;
-    /* margin-top: -12px; */
+    top: 162px;
   }
   .lien-page-header.active .dropdown,
   .lien-page-header.active .lien-connect,
@@ -394,15 +409,14 @@ a:hover,
     width: 100%;
     padding: 1em;
   }
-  /* .navbar a {
-    margin-left: 128px;
-  } */
+  .dropdown-content {
+    padding-left: 25px;
+    margin-left: 100px;
+  }
   .icone-connect {
-    /* margin-bottom: 15px;
-    margin-left: 10px; */
     position: absolute;
     bottom: 85px;
-    right: 72px;
+    right: 80px;
   }
   .tarif-contact-avis {
     flex-direction: column;
@@ -444,32 +458,75 @@ a:hover,
   }
 }
 
-/* Téléphones portables */
-@media (max-width: 360px) {
+@media (max-width: 706px) {
   header .parallax {
-    height: 13vh;
-    background-attachment: fixed;
+    height: 26vh;
   }
-  /* header .hamburger {
-    top: 1em;
-    right: 1em;
-    font-size: 1.5em;
-  } */
-  header .hamburger {
-    display: block;
-    font-size: 1.7em;
-    cursor: pointer;
-    color: #fff;
-    /* margin-top: -12px; */
+}
+
+@media (max-width: 682px) {
+  header .parallax {
+    height: 25vh;
   }
-  body .intro {
-    width: 90%;
-    margin-top: 3em;
+}
+
+@media (max-width: 674px) {
+  header .parallax {
+    height: 25vh;
   }
+}
+
+@media (max-width: 622px) {
+  header .parallax {
+    height: 23vh;
+  }
+}
+
+@media (max-width: 550px) {
+  header .parallax {
+    height: 20vh;
+  }
+}
+
+@media (max-width: 480px) {
+  header .parallax {
+    height: 18vh;
+  }
+}
+
+@media (max-width: 425px) {
+  header .parallax {
+    width: 100%;
+    height: 16vh;
+  }
+}
+
+@media (max-width: 393px) {
   header .dropdown .dropbtn,
   header .dropdown-content,
   header .tarif-contact-avis a {
     font-size: 0.8em;
+  }
+}
+
+@media (max-width: 380px) {
+  header .parallax {
+    width: 100%;
+    height: 14vh;
+  }
+}
+
+/* Téléphones portables */
+@media (max-width: 360px) {
+  body {
+    overflow-y: auto;
+  }
+  header .parallax {
+    height: 13vh;
+  }
+  body .intro {
+    width: 90%;
+    margin-top: 3em;
   }
   .intro h1 {
     font-size: 1.3rem;
@@ -481,14 +538,13 @@ a:hover,
     width: 40%;
   }
   footer {
+    width: 100%;
     font-size: 14px;
-    text-align: center;
-    padding: 10px;
   }
   .copyright-info {
     font-size: 0.7rem;
   }
   footer .copyright-info a {
-    font-size: 0.875rem;
+    font-size: 1em;
   }
 }

@@ -41,9 +41,6 @@ body {
 
 /* Tablettes et petits écrans */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .lien-page-header {
-    padding-bottom: 10px;
-  }
   .liste-domaines-list-1 {
     margin-right: 40px;
   }
@@ -86,7 +83,40 @@ body {
   }
 }
 
+@media (max-width: 706px) {
+  header .hamburger {
+    top: 151px;
+  }
+}
+
+@media (max-width: 682px) {
+  header .hamburger {
+    top: 145px;
+  }
+}
+
+/* @media (max-width: 674px) {
+  header .hamburger {
+    top: ;
+  }
+} */
+
+@media (max-width: 622px) {
+  header .hamburger {
+    top: 135px;
+  }
+}
+
+@media (max-width: 550px) {
+  header .hamburger {
+    top: 120px;
+  }
+}
+
 @media (max-width: 480px) {
+  header .hamburger {
+    top: 110px;
+  }
   .intro h1 {
     font-size: 1.1em;
   }
@@ -104,8 +134,23 @@ body {
   }
 }
 
+@media (max-width: 425px) {
+  header .hamburger {
+    top: 100px;
+  }
+}
+
+@media (max-width: 380px) {
+  header .hamburger {
+    top: 90px;
+  }
+}
+
 /* Téléphones portables */
 @media (min-width: 320px) and (max-width: 360px) {
+  header .hamburger {
+    top: 85px;
+  }
   section .section-presentation {
     display: flex;
     flex-direction: column;
