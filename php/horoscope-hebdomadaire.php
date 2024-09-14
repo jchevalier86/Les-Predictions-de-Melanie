@@ -35,6 +35,9 @@
 <body>
   <!-- En-tête de la page -->
   <header>
+    <!-- Ajout d'une image avec effet parallax -->
+    <div class="parallax"> </div>
+
     <!-- Ajout du bouton hamburger -->
     <div class="hamburger" onclick="toggleMenu()"> &#9776; </div>
 
@@ -237,19 +240,17 @@
         <li><a href="./formulaire-connexion.php"> Connexion </a></li>
       </ul>
 
-      <div class="definition-pratique">
-        <ul>
-          <li><a href="../html/definition-voyance.html"> Définition voyance </a></li>
-          <li><a href="../html/definition-cartomancie.html"> Définition cartomancie </a></li>
-          <li><a href="../html/definition-ressenti-photo.html"> Définition ressenti photo </a></li>
-        </ul>
+      <ul>
+        <li><a href="../html/definition-voyance.html"> Définition voyance </a></li>
+        <li><a href="../html/definition-cartomancie.html"> Définition cartomancie </a></li>
+        <li><a href="../html/definition-ressenti-photo.html"> Définition ressenti photo </a></li>
+      </ul>
 
-        <ul>
-          <li><a href="../html/pratique-voyance.html"> Pratique voyance </a></li>
-          <li><a href="../html/pratique-cartomancie.html"> Pratique cartomancie </a></li>
-          <li><a href="../html/pratique-ressenti-photo.html"> Pratique ressenti photo </a></li>
-        </ul>
-    </div>
+      <ul>
+        <li><a href="../html/pratique-voyance.html"> Pratique voyance </a></li>
+        <li><a href="../html/pratique-cartomancie.html"> Pratique cartomancie </a></li>
+        <li><a href="../html/pratique-ressenti-photo.html"> Pratique ressenti photo </a></li>
+      </ul>
 
       <ul>
         <li><a href="./formulaire-avis.php"> Avis clients </a></li>

@@ -38,6 +38,9 @@
 <body>
     <!-- En-tête de la page -->
     <header>
+        <!-- Ajout d'une image avec effet parallax -->
+        <div class="parallax"> </div>
+        
         <!-- Navigation pour retourner à la page d'accueil -->
         <nav class="lien-page-inscription">
 
@@ -153,7 +156,6 @@
                 <li><a href="./formulaire-connexion.php"> Connexion </a></li>
             </ul>
 
-        <div class="definition-pratique">
             <ul>
                 <li><a href="../html/definition-voyance.html"> Définition voyance </a></li>
                 <li><a href="../html/definition-cartomancie.html"> Définition cartomancie </a></li>
@@ -165,7 +167,6 @@
                 <li><a href="../html/pratique-cartomancie.html"> Pratique cartomancie </a></li>
                 <li><a href="../html/pratique-ressenti-photo.html"> Pratique ressenti photo </a></li>
             </ul>
-        </div>
 
             <ul>
                 <li><a href="./formulaire-avis.php"> Avis </a></li>

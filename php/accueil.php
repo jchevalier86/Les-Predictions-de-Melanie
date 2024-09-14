@@ -33,6 +33,7 @@
 
 <body>
     <header>
+      <!-- Ajout d'une image avec effet parallax -->
       <div class="parallax"> </div>
 
       <!-- Ajout du bouton hamburger -->
