@@ -34,9 +34,6 @@
 <body>
   <!-- En-tête de la page -->
   <header>
-    <!-- Ajout d'une image avec effet parallax -->
-    <div class="parallax"> </div>
-
     <!-- Ajout du bouton hamburger -->
     <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
 

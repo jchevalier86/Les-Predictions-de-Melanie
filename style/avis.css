@@ -56,11 +56,17 @@ body {
 @media (max-width: 768px) {
   .lien-page-header {
     flex-direction: column;
-    padding-bottom: 10px;
+    align-items: flex-start;
+  }
+  .tarif-contact-avis {
+    flex-direction: column;
+    align-items: end;
+    padding-right: 50px;
+    width: 100%;
   }
   .back-home {
-    margin-bottom: 10px;
-    margin-left: 10px;
+    padding-left: 20px;
+    margin: 0 0 10px 10px;
   }
   .icone-connect {
     margin: 10px 0 10px 10px;

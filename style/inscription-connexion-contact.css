@@ -46,19 +46,15 @@ body {
     padding-bottom: 10px;
   }
   .back-home {
-    margin-bottom: 10px;
-    margin-left: 10px;
-    width: 70%;
-  }
-  .icone-connect {
-    margin-top: 10px;
+    width: 85%;
+    margin-top: 1px;
   }
   .title {
-    font-size: 20px;
+    font-size: 1.5em;
   }
   .container h2,
   .container-2 h2 {
-    font-size: 19px;
+    font-size: 1.3em;
   }
   textarea {
     max-width: 100%;
@@ -66,16 +62,20 @@ body {
 }
 
 /* Petites tablettes et grands téléphones */
-@media (min-width: 320px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .lien-page-header {
     flex-direction: column;
+    align-items: flex-start;
+  }
+  .tarif-contact-avis {
+    flex-direction: column;
+    align-items: end;
+    padding-right: 50px;
+    width: 100%;
   }
   .back-home {
-    margin-bottom: 10px;
-    width: 71%;
-  }
-  .icone-connect {
-    margin-top: 10px;
+    height: 1.3em;
+    padding-left: 20px;
   }
   .title {
     font-size: 1em;
@@ -86,7 +86,7 @@ body {
   }
   .container h2,
   .container-2 h2 {
-    font-size: 18px;
+    font-size: 1.2em;
   }
   textarea {
     max-width: 100%;
@@ -94,18 +94,20 @@ body {
 }
 
 /* Téléphones portables */
-@media (max-width: 360px) {
-  .back-home {
-    margin-bottom: 0.8em;
-    margin-top: 0.8em;
+@media (min-width: 320px) and (max-width: 360px) {
+  .title {
+    font-size: 0.9em;
   }
   .container,
   .container-2 {
-    max-width: 80%;
+    max-width: 90%;
   }
   p,
   a.forgot-your-password {
-    font-size: 0.8em;
+    font-size: 0.9em;
+  }
+  label {
+    font-size: 0.9em;
   }
 }
 
@@ -137,6 +139,7 @@ body {
 .container,
 .container-2 {
   width: 350px;
+  height: auto;
   margin: 70px auto;
   background-color: #fff;
   padding: 20px;

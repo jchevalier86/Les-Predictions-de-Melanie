@@ -38,9 +38,6 @@
 <body>
   <!-- En-tête de la page -->
   <header>
-    <!-- Ajout d'une image avec effet parallax -->
-    <div class="parallax"> </div>
-
     <!-- Navigation pour la page d'inscription avec un lien de retour à l'accueil -->
     <nav class="lien-page-inscription">
 
@@ -95,7 +92,7 @@
 
       <!-- Champ de saisie pour le numéro de téléphone -->
       <label for="phone"> Tel </label>
-      <input type="tel" id="phone" name="phone" placeholder="+33" value="<?php echo isset($_SESSION['form_data']['phone']) ? htmlspecialchars($_SESSION['form_data']['phone']) : ''; ?>">
+      <input type="tel" id="phone" name="phone" placeholder="0123456789" value="<?php echo isset($_SESSION['form_data']['phone']) ? htmlspecialchars($_SESSION['form_data']['phone']) : ''; ?>">
       <?php if (isset($_SESSION['errorMessages']['phone'])): ?>
       <span style="color: red; font-size: 14px;"> <?php echo $_SESSION['errorMessages']['phone']; ?> </span>
       <?php endif; ?>

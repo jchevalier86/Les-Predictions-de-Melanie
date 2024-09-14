@@ -51,7 +51,6 @@ body {
 @media (max-width: 768px) {
   .lien-page-header {
     flex-direction: column;
-    padding-bottom: 10px;
   }
   .back-home {
     margin-bottom: 10px;
@@ -111,10 +110,6 @@ h1 {
   color: #333;
   text-align: center;
   padding-bottom: 25px;
-}
-
-form {
-  margin-top: 25px;
 }
 
 label {

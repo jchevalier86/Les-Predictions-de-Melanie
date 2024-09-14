@@ -40,10 +40,6 @@ body {
     flex-direction: column;
     padding-bottom: 10px;
   }
-  .back-home {
-    margin-bottom: 10px;
-    padding-left: 10px;
-  }
   .body-image h1 {
     font-size: 20px;
   }
@@ -56,11 +52,10 @@ body {
 @media (max-width: 768px) {
   .lien-page-header {
     flex-direction: column;
-    padding-bottom: 10px;
+    align-items: flex-start;
   }
   .back-home {
-    margin-bottom: 10px;
-    padding-left: 10px;
+    padding-left: 20px;
   }
   .body-image h1 {
     font-size: 20px;

@@ -22,10 +22,10 @@
 */
 
 body {
-  background-image: url(../images/melanie-voyante-1.jpeg);
-  background-size: cover;
+  background-image: url(../images/);
+  background-size: contain;
   background-attachment: fixed;
-  background-position: center;
+  background-position: bottom;
 }
 
 /* --------------------------- 
@@ -34,16 +34,13 @@ body {
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .lien-page-header {
-    flex-direction: column;
-    padding-bottom: 10px;
-  }
   .back-home {
     margin-bottom: 10px;
-    padding-left: 10px;
   }
-  .intro h1 {
-    font-size: 19px;
+  .lien-page-header {
+    flex-direction: column;
+    padding: 20px 0;
+    margin: 0;
   }
 }
 
@@ -51,16 +48,23 @@ body {
 @media (max-width: 768px) {
   .lien-page-header {
     flex-direction: column;
+    align-items: flex-start;
   }
   .back-home {
-    margin-bottom: 10px;
-    padding-left: 10px;
+    padding-left: 20px;
+    height: 1.3em;
   }
-  .intro h1 {
-    font-size: 18px;
+  body .intro {
+    width: 90%;
   }
-  .intro h2 {
-    text-align: left;
+  .presentation {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 360px) {
+  .presentation {
+    font-size: 15px;
   }
 }
 
@@ -82,6 +86,7 @@ body {
 
 .intro {
   max-width: 675px;
+  width: 100%;
   margin: 90px auto;
   background-color: #fff;
   border-radius: 8px;
@@ -101,7 +106,8 @@ body {
 
 .presentation {
   padding: 25px;
-  width: 550px;
+  max-width: 550px;
+  width: 100%;
   line-height: 23px;
 }
 

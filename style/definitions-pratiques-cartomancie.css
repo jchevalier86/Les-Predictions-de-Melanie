@@ -18,8 +18,8 @@
 */
 
 body {
-  background-image: url(../images/);
-  background-size: cover;
+  background-image: url(../images/oracle-ge.jpeg);
+  background-size: contain;
   background-attachment: fixed;
-  background-position: center;
+  background-position: bottom;
 }

@@ -94,32 +94,33 @@
         </div>
 
         <!-- Liens directs pour Tarif, Contact, Avis clients et Horoscope -->
-        <div class="tarif-contact-avis">
-          <a href="../html/tarif.html"> Tarif </a>
-          <a href="./formulaire-contact.php"> Contact </a>
-          <a href="./formulaire-avis.php"> Avis </a>
-          <a href="./formulaire-horoscope.php"> Horoscope </a>
-        </div>
+        <div class="lien-contact">
+          <div class="tarif-contact-avis">
+            <a href="../html/tarif.html"> Tarif </a>
+            <a href="./formulaire-contact.php"> Contact </a>
+            <a href="./formulaire-avis.php"> Avis </a>
+            <a href="./formulaire-horoscope.php"> Horoscope </a>
+          </div>
 
-        <?php if (isset($_SESSION['user_id'])): ?>
-        <!-- Icône de déconnexion avec un lien vers la page de déconnexion -->
-        <div class="lien-deconnect">
-          <img class="icone-connect" src="../images/deconnexion.png" alt="Aller à la page accueil"
-            onclick="window.location.href='./deconnexion.php'">
-          <!-- <span class="deconnect"> Déconnexion </span> -->
-        </div>
-        <?php else: ?>
-        <!-- Icône de connexion avec un lien vers la page de connexion -->
-        <div class="lien-connect">
-          <img class="icone-connect" src="../images/connexion.png" alt="Aller à la page de connexion"
-            onclick="window.location.href='./formulaire-connexion.php'">
-          <!-- <span class="connect"> Connexion </span> -->
+          <?php if (isset($_SESSION['user_id'])): ?>
+          <!-- Icône de déconnexion avec un lien vers la page de déconnexion -->
+          <div class="lien-deconnect">
+            <img class="icone-connect" src="../images/deconnexion.png" alt="Aller à la page accueil"
+              onclick="window.location.href='./deconnexion.php'">
+            <!-- <span class="deconnect"> Déconnexion </span> -->
+          </div>
+          <?php else: ?>
+          <!-- Icône de connexion avec un lien vers la page de connexion -->
+          <div class="lien-connect">
+            <img class="icone-connect" src="../images/connexion.png" alt="Aller à la page de connexion"
+              onclick="window.location.href='./formulaire-connexion.php'">
+            <!-- <span class="connect"> Connexion </span> -->
+          </div>
         </div>
         <?php endif; ?>
       </nav>
     </header>
 
-  <main>
     <!-- Section d'introduction -->
     <section class="intro">
       <h1>Les prédictions de Mélanie</h1>
@@ -179,7 +180,6 @@
         </div>
       </div>
     </section>
-  </main>
 
     <!-- Pied de page avec des liens vers les différentes pages du site -->
     <footer class="lien-page-footer">

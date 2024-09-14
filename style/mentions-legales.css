@@ -35,9 +35,18 @@
     margin-bottom: 11px;
     margin-left: 11px;
   }
+  .presentation .presentation-text-content {
+    font-size: 16px;
+    padding-left: 2em;
+  }
+  .intro h2,
+  .text p {
+    text-align: left;
+  }
 }
 
-@media (max-width: 360px) {
+/* Téléphones portables */
+@media (min-width: 320px) and (max-width: 360px) {
   .lien-page-header {
     flex-direction: column;
     padding-bottom: 10px;
@@ -45,6 +54,11 @@
   .back-home {
     margin-bottom: 11px;
     margin-left: 11px;
+  }
+  .presentation .presentation-text-content {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -74,7 +88,7 @@
 }
 
 .presentation {
-  width: 550px;
+  max-width: 550px;
   line-height: 23px;
 }
 

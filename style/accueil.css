@@ -34,6 +34,16 @@ body {
   flex-direction: column;
 }
 
+.parallax {
+  background-image: url(../images/melanie-voyante-2.jpg);
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 42vh;
+}
+
 /* ---------------------------- 
  * Responsive Design 
  * ---------------------------- 
@@ -41,6 +51,9 @@ body {
 
 /* Tablettes et petits écrans */
 @media (min-width: 768px) and (max-width: 1024px) {
+  .parallax {
+    height: 36vh;
+  }
   .liste-domaines-list-1 {
     margin-right: 40px;
   }
@@ -53,8 +66,39 @@ body {
   }
 }
 
+@media (max-width: 975px) {
+  header .parallax {
+    width: 100%;
+    height: 37vh;
+  }
+}
+
+@media (max-width: 880px) {
+  header .parallax {
+    width: 100%;
+    height: 34vh;
+  }
+}
+
+@media (max-width: 805px) {
+  header .parallax {
+    width: 100%;
+    height: 30vh;
+  }
+}
+
 /* Petites tablettes et grands téléphones */
 @media (max-width: 768px) {
+  header .parallax {
+    height: 28vh;
+  }
+  header .hamburger {
+    display: block;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: #fff;
+    top: 162px;
+  }
   section .section-presentation {
     display: flex;
     flex-direction: column;
@@ -84,92 +128,85 @@ body {
 }
 
 @media (max-width: 706px) {
+  header .parallax {
+    height: 26vh;
+  }
   header .hamburger {
     top: 151px;
   }
 }
 
 @media (max-width: 682px) {
+  header .parallax {
+    height: 25vh;
+  }
   header .hamburger {
     top: 145px;
   }
 }
 
-/* @media (max-width: 674px) {
-  header .hamburger {
-    top: ;
+@media (max-width: 674px) {
+  header .parallax {
+    height: 25vh;
   }
-} */
+}
 
 @media (max-width: 622px) {
+  header .parallax {
+    height: 23vh;
+  }
   header .hamburger {
     top: 135px;
   }
 }
 
 @media (max-width: 550px) {
+  header .parallax {
+    height: 20vh;
+  }
   header .hamburger {
     top: 120px;
   }
 }
 
 @media (max-width: 480px) {
+  header .parallax {
+    height: 18vh;
+  }
   header .hamburger {
     top: 110px;
   }
-  .intro h1 {
-    font-size: 1.1em;
-  }
-  .intro h2,
-  .intro span {
-    font-size: 1em;
-  }
-  .intro p,
-  .intro .presentation-span,
-  .intro .liste-domaines-conteneur {
-    font-size: 0.9em;
-  }
   .intro .photo {
-    padding-top: 5em;
+    padding-top: 9em;
   }
 }
 
 @media (max-width: 425px) {
+  header .parallax {
+    height: 16vh;
+  }
   header .hamburger {
     top: 100px;
   }
 }
 
 @media (max-width: 380px) {
+  header .parallax {
+    height: 14vh;
+  }
   header .hamburger {
-    top: 90px;
+    top: 84px;
   }
 }
 
 /* Téléphones portables */
 @media (min-width: 320px) and (max-width: 360px) {
+  header .parallax {
+    height: 13vh;
+  }
   header .hamburger {
     top: 85px;
-  }
-  section .section-presentation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-  }
-  .presentation {
-    padding: 25px;
-  }
-  section .liste-domaines-conteneur {
-    margin: 0 -1em;
-  }
-  .liste-domaines,
-  .intro .presentation-span,
-  .presentation-text-content {
-    font-size: 0.8em;
-  }
-  .intro .liste-domaines span {
-    font-size: 1.1em;
+    font-size: 1.5em;
   }
   .photo {
     margin-top: 1em;

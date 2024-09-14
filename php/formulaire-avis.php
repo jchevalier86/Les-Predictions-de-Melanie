@@ -44,9 +44,6 @@
 <body>
   <!-- En-tête de la page -->
   <header>
-    <!-- Ajout d'une image avec effet parallax -->
-    <div class="parallax"> </div>
-
     <!-- Ajout du bouton hamburger -->
     <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
 
@@ -112,30 +109,31 @@
         </div>
       </div>
 
-      <!-- Liens directs pour Tarif, Contact, Avis clients et Horoscope -->
-      <div class="tarif-contact-avis">
-        <a href="../html/tarif.html"> Tarif </a>
-        <a href="./formulaire-contact.php"> Contact </a>
-        <a href="./formulaire-avis.php"> Avis </a>
-        <a href="./formulaire-horoscope.php"> Horoscope </a>
-      </div>
+      <div class="lien-contact">
+        <!-- Liens directs pour Tarif, Contact, Avis clients et Horoscope -->
+        <div class="tarif-contact-avis">
+          <a href="../html/tarif.html"> Tarif </a>
+          <a href="./formulaire-contact.php"> Contact </a>
+          <a href="./formulaire-avis.php"> Avis </a>
+          <a href="./formulaire-horoscope.php"> Horoscope </a>
+        </div>
 
-      <?php if (isset($_SESSION['user_id'])): ?>
-      <!-- Icône de déconnexion avec un lien vers la page de déconnexion -->
-      <div class="lien-deconnect">
-        <img class="icone-connect" src="../images/deconnexion.png" alt="Aller à la page accueil"
-          onclick="window.location.href='./deconnexion.php'">
-        <span class="deconnect"> Déconnexion </span>
+        <?php if (isset($_SESSION['user_id'])): ?>
+        <!-- Icône de déconnexion avec un lien vers la page de déconnexion -->
+        <div class="lien-deconnect">
+          <img class="icone-connect" src="../images/deconnexion.png" alt="Aller à la page accueil"
+            onclick="window.location.href='./deconnexion.php'">
+          <span class="deconnect"> Déconnexion </span>
+        </div>
+        <?php else: ?>
+        <!-- Icône de connexion avec un lien vers la page de connexion -->
+        <div class="lien-connect">
+          <img class="icone-connect" src="../images/connexion.png" alt="Aller à la page de connexion"
+            onclick="window.location.href='./formulaire-connexion.php'">
+          <span class="connect"> Connexion </span>
+        <?php endif; ?>
+        </div>
       </div>
-      <?php else: ?>
-      <!-- Icône de connexion avec un lien vers la page de connexion -->
-      <div class="lien-connect">
-        <img class="icone-connect" src="../images/connexion.png" alt="Aller à la page de connexion"
-          onclick="window.location.href='./formulaire-connexion.php'">
-        <span class="connect"> Connexion </span>
-      <?php endif; ?>
-      </div>
-
     </nav>
   </header>
 

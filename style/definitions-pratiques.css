@@ -25,71 +25,75 @@
   .back-home {
     margin: 0 0 11px 11px;
   }
-  .presentation.show {
-    padding: 30px 30px;
-    width: 100%;
-  }
-  .presentation-text-content {
-    margin: 0;
-  }
-  .photo-pratique-voyance {
-    padding-left: 2em;
-  }
-  .photo-body-1.show,
-  .photo-body-1-pratique.show,
-  .photo-body-2.show {
-    width: 90%;
-    height: 90%;
-    border-radius: 10px;
-  }
-  .photo {
-    padding-left: 2em;
-  }
-  /* .photo-body-3.show {
-    width: 57%;
-    height: 400px;
-  } */
 }
 
 /* Petites tablettes et grands téléphones */
 @media (max-width: 768px) {
+  .lien-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .back-home {
+    padding-left: 10px;
+  }
+  .lien-home {
+    padding-left: 15px;
+  }
+  .section1-col1 {
+    gap: 2em;
+  }
+  .section2-col2,
+  .section3-col3 {
+    gap: 4em;
+  }
   .presentation.show {
     padding: 30px 0;
   }
   .presentation-text-content {
     padding: 0 25px;
-    font-size: 14px;
+    font-size: 16px;
+  }
+  .photo-body-1.show,
+  .photo-body-1-pratique.show,
+  .photo-body-2.show,
+  .photo-body-2-pratique.show {
+    width: 80%;
+    height: 80%;
   }
   .photo-pratique-voyance {
     padding-left: 5em;
   }
-  .photo-body-1.show,
-  .photo-body-1-pratique.show,
-  .photo-body-2.show {
-    width: 80%;
-    height: 80%;
-  }
   .photo {
-    padding: 3em 0 0 5em;
+    padding-left: 4em;
   }
 }
 
 @media (max-width: 480px) {
+  .section1-col1 {
+    gap: 9em;
+  }
+  .section2-col2 {
+    gap: 3em;
+  }
+  .photo .photo-body-3 {
+    margin-left: 3em;
+  }
   .presentation-text-content {
     padding: 0 12px;
-    font-size: 12px;
-  }
-  .photo-pratique-voyance {
-    padding: 2em 0 0 5em;
+    font-size: 15px;
   }
   .photo-body-1.show,
   .photo-body-1-pratique.show,
-  .photo-body-2.show {
-    width: 75%;
-    height: 75%;
+  .photo-body-2.show,
+  .photo-body-2-pratique.show {
+    width: 85%;
+    height: 85%;
+  }
+  .photo-pratique-voyance {
+    padding-left: 2em;
   }
   .photo {
-    padding: 10em 0 0 5em;
+    padding: 0 0 0 2em;
   }
 }
 
@@ -98,26 +102,17 @@
   body .intro {
     width: 90%;
   }
-  header .hamburger {
-    top: 102px;
+  .section1-col1 {
+    gap: 12em;
   }
-  .presentation.show {
-    width: 100%;
+  .section2-col2 {
+    gap: 4em;
   }
-  .presentation-text-content {
-    padding: 25px;
-  }
-  .photo-pratique-voyance {
-    padding: 11em 0 0 4em;
-  }
-  .photo-body-1.show,
-  .photo-body-1-pratique.show,
-  .photo-body-2.show {
-    width: 70%;
-    height: 70%;
+  .section3-col3 {
+    gap: 8em;
   }
   .photo {
-    padding: 7em 0 0 4em;
+    padding: 0 0 0 2.5em;
   }
 }
 
@@ -186,23 +181,17 @@
 
 .photo-body-3 {
   margin-top: 9em;
-}
-
-.photo .photo-body-3 {
   margin-left: 8em;
 }
 
 .photo-body-1-pratique,
 .photo-body-2-pratique {
-  margin-top: 31em;
-  margin-bottom: 3em;
+  margin-top: 32em;
+  margin-bottom: 2em;
 }
 
 .photo-body-3-pratique {
   margin-top: 25em;
-}
-
-.photo .photo-body-3-pratique {
   margin-left: 8em;
 }
 
@@ -213,7 +202,9 @@
   gap: 8em;
 }
 
-.section1-col1 {
+.section1-col1,
+.section2-col2,
+.section3-col3 {
   display: flex;
   flex-direction: column;
   align-items: center;

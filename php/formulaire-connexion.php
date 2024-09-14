@@ -38,9 +38,6 @@
 <body>
     <!-- En-tête de la page -->
     <header>
-        <!-- Ajout d'une image avec effet parallax -->
-        <div class="parallax"> </div>
-        
         <!-- Navigation pour retourner à la page d'accueil -->
         <nav class="lien-page-inscription">
 
