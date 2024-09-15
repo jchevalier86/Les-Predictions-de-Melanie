@@ -35,6 +35,10 @@ body {
   .photo-body-3 {
     margin-left: 6.3em;
   }
+  .photo-pratique {
+    padding-right: 4em;
+    margin: 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -50,4 +54,9 @@ body {
     width: 90%;
     margin: 10em 1em 0 0;
   }
+}
+
+.photo {
+  padding-right: 10em;
+  padding-top: 8em;
 }

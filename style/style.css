@@ -82,7 +82,6 @@ body {
     padding: 0.8em;
   }
   .dropdown-content {
-    padding-left: 2em;
     margin: -3.5em 11em;
   }
   header .tarif-contact-avis {
@@ -162,9 +161,6 @@ body {
   .intro .presentation-span,
   .intro .liste-domaines-conteneur {
     font-size: 1em;
-  }
-  .intro .photo {
-    padding-top: 8em;
   }
 }
 

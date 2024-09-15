@@ -89,6 +89,11 @@ body {
     display: block;
   }
 }
+@media (max-width: 480px) {
+  .intro .photo {
+    padding-top: 8em;
+  }
+}
 
 /* Téléphones portables */
 @media (min-width: 320px) and (max-width: 360px) {
