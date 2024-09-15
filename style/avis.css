@@ -57,25 +57,40 @@ body {
   .lien-page-header {
     flex-direction: column;
     align-items: flex-start;
+    padding-left: 15px;
   }
   .tarif-contact-avis {
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     padding-right: 50px;
     width: 100%;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
   .back-home {
     padding-left: 20px;
     margin: 0 0 10px 10px;
   }
-  .icone-connect {
-    margin: 10px 0 10px 10px;
+  .icone-connect,
+  .icone-deconnect {
+    padding-left: 0;
+    margin: 0 0 10px 10px;
   }
   .container {
     max-width: 90%;
   }
   .avis-container {
     max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .tarif-contact-avis {
+    align-items: flex-start;
+    padding-left: 14px;
   }
 }
 

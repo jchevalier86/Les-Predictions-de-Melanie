@@ -33,6 +33,197 @@ body {
 }
 
 /* --------------------------- 
+ * Responsive Design 
+ * ---------------------------- 
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .lien-page-header {
+    flex-direction: column;
+    padding: 20px 0;
+    margin: 0;
+  }
+  footer .nav-links-2 {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5em;
+    padding: 0;
+  }
+}
+
+/* Petites tablettes et grands téléphones */
+@media (max-width: 767px) {
+  .lien-page-header .dropdown,
+  .lien-page-header .tarif-contact-avis {
+    display: none;
+  }
+  header .hamburger {
+    display: block;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #fff;
+    top: 16px;
+  }
+  .lien-page-header.active .dropdown {
+    display: block;
+    text-align: center;
+  }
+  .lien-page-header.active .tarif-contact-avis {
+    display: flex;
+  }
+  header .lien-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0.8em;
+  }
+  .dropdown-content {
+    padding-left: 2em;
+    margin: -3.5em 11em;
+  }
+  header .tarif-contact-avis {
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 35px;
+    width: 100%;
+  }
+  .back-home {
+    height: 1.3em;
+  }
+  .intro {
+    width: 95%;
+    margin: 2em auto;
+  }
+  .intro .separator {
+    width: 24%;
+  }
+  .intro h1 {
+    font-size: 1.5em;
+  }
+  .intro h2 {
+    font-size: 1.2em;
+  }
+  footer .nav-links-2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding: 10px;
+  }
+  footer .copyright-info a {
+    font-size: 0.875rem;
+    margin-top: 5px;
+  }
+  footer {
+    font-size: 0.875rem;
+    text-align: center;
+    padding: 15px;
+  }
+  .copyright-info {
+    font-size: 0.75rem;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  header .lien-page-header,
+  .tarif-contact-avis {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header .tarif-contact-avis {
+    align-items: flex-start;
+    padding-left: 10px;
+  }
+  .dropdown-content {
+    margin: -4em 9em;
+  }
+  .lien-connect {
+    padding-right: 50px;
+  }
+  header .dropdown .dropbtn,
+  header .dropdown-content,
+  header .tarif-contact-avis a {
+    font-size: 0.8em;
+  }
+  .intro h1 {
+    font-size: 1.1em;
+  }
+  .intro h2,
+  .intro span {
+    font-size: 1em;
+  }
+  .intro p,
+  .intro .presentation-span,
+  .intro .liste-domaines-conteneur {
+    font-size: 1em;
+  }
+  .intro .photo {
+    padding-top: 8em;
+  }
+}
+
+/* Téléphones portables */
+@media (min-width: 320px) and (max-width: 360px) {
+  header .hamburger {
+    font-size: 1.5em;
+  }
+  body .intro {
+    width: 90%;
+    margin-top: 3em;
+  }
+  .intro h1 {
+    font-size: 1em;
+  }
+  .intro h2 {
+    font-size: 0.9em;
+  }
+  .intro p,
+  .intro .presentation-span,
+  .intro .liste-domaines-conteneur {
+    font-size: 0.9em;
+  }
+  .intro .separator {
+    width: 40%;
+  }
+  section .section-presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+  .presentation {
+    padding: 25px;
+  }
+  section .liste-domaines-conteneur {
+    margin: 0 -1em;
+  }
+  .liste-domaines,
+  .intro .presentation-span,
+  .presentation-text-content {
+    font-size: 0.8em;
+  }
+  .intro .liste-domaines span {
+    font-size: 1.1em;
+  }
+  footer {
+    width: 100%;
+    font-size: 14px;
+  }
+  .copyright-info {
+    font-size: 0.7rem;
+  }
+  footer .copyright-info a {
+    font-size: 1em;
+  }
+}
+
+/* --------------------------- 
  * Header 
  * ---------------------------- 
 */
@@ -67,7 +258,10 @@ nav {
 
 .lien-home,
 .icone-connect,
-.icone-deconnect {
+.icone-deconnect,
+.navbar a,
+.dropdown .dropbtn,
+.tarif-contact-avis a {
   cursor: pointer;
 }
 
@@ -80,7 +274,6 @@ nav {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  cursor: pointer;
 }
 
 .navbar a:hover {
@@ -97,12 +290,10 @@ nav {
   color: #fff;
   padding: 14px 16px;
   background-color: inherit;
-  cursor: pointer;
 }
 
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-  background-color: #fff;
   color: #000;
   border-radius: 4px;
 }
@@ -125,7 +316,10 @@ nav {
   text-align: left;
 }
 
-.dropdown-content a:hover {
+.navbar a:hover,
+.dropdown:hover .dropbtn,
+.dropdown-content a:hover,
+.tarif-contact-avis a:hover {
   background-color: #fff;
 }
 
@@ -144,7 +338,6 @@ nav {
 }
 
 .tarif-contact-avis a:hover {
-  background-color: #fff;
   color: #000;
   border-radius: 4px;
   text-decoration: none;
@@ -155,21 +348,18 @@ nav {
   text-decoration: none;
   font-size: 16px;
   letter-spacing: 1px;
-  cursor: pointer;
   padding: 14px 16px;
 }
 
 .icone-connect,
 .icone-deconnect {
-  height: 26px;
-  padding-top: 7px;
-  margin-right: 10px;
+  height: 20px;
+  padding-left: 20px;
   max-width: 100%;
 }
 
-.lien-contact {
-  display: flex;
-  gap: 10px;
+.lien-home-connect {
+  padding-bottom: 5px;
 }
 
 /* --------------------------- 
@@ -179,24 +369,27 @@ nav {
 
 h1 {
   color: #6a0dad;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 900;
   text-transform: uppercase;
-  text-align: center;
   padding-top: 2em;
 }
 
 h2 {
   font-size: 20px;
   font-weight: 600;
-  text-align: center;
   letter-spacing: 1px;
+}
+
+h1,
+h2 {
+  text-align: center;
 }
 
 .separator {
   border: none;
   height: 2px;
-  background-color: black;
+  background-color: #000000;
   width: 20%;
   margin: 20px auto;
 }
@@ -323,222 +516,4 @@ a:hover,
   color: #000;
   font-size: 16px;
   font-weight: 400;
-}
-
-/* --------------------------- 
- * Responsive Design 
- * ---------------------------- 
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .lien-page-header {
-    flex-direction: column-reverse;
-    padding: 20px 0;
-    margin: 0;
-  }
-  .lien-contact {
-    flex-direction: column-reverse;
-  }
-  footer .nav-links-2 {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 5em;
-    padding: 0;
-  }
-}
-
-/* Petites tablettes et grands téléphones */
-@media (max-width: 767px) {
-  .lien-page-header .dropdown,
-  .lien-page-header .tarif-contact-avis,
-  .lien-page-header .lien-connect,
-  .lien-page-header .lien-deconnect {
-    display: none;
-  }
-  header .hamburger {
-    display: block;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: #fff;
-    top: 16px;
-  }
-  .lien-page-header.active .dropdown,
-  .lien-page-header.active .lien-connect,
-  .lien-page-header.active .lien-deconnect {
-    display: block;
-    text-align: center;
-  }
-  .lien-page-header.active .tarif-contact-avis {
-    display: flex;
-  }
-  .lien-page-header {
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    padding: 0.8em;
-  }
-  .dropdown-content {
-    padding-left: 2em;
-    margin: -3.5em 11em;
-  }
-  .lien-contact {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
-  }
-  .tarif-contact-avis {
-    flex-direction: column;
-    align-items: end;
-    padding-right: 35px;
-    width: 100%;
-  }
-  .back-home {
-    height: 1.3em;
-  }
-  .icone-connect,
-  .icone-deconnect {
-    padding-left: 15px;
-    margin: 0;
-  }
-  .intro {
-    width: 95%;
-    margin: 2em auto;
-  }
-  .intro .separator {
-    width: 24%;
-  }
-  .intro h1 {
-    font-size: 1.5em;
-  }
-  .intro h2 {
-    font-size: 1.2em;
-  }
-  footer .nav-links-2 {
-    flex-direction: column;
-    align-items: center;
-    gap: 2em;
-    padding: 10px;
-  }
-  footer .copyright-info a {
-    font-size: 0.875rem;
-    margin-top: 5px;
-  }
-  footer {
-    font-size: 0.875rem;
-    text-align: center;
-    padding: 15px;
-  }
-  .copyright-info {
-    font-size: 0.75rem;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  header .lien-page-header,
-  .tarif-contact-avis {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .lien-contact {
-    flex-direction: column-reverse;
-    gap: 15px;
-  }
-  .tarif-contact-avis {
-    padding-left: 10px;
-  }
-  .dropdown-content {
-    margin: -4em 9em;
-  }
-  .lien-connect {
-    padding-right: 50px;
-  }
-  .icone-connect,
-  .icone-deconnect {
-    height: 25px;
-    padding-right: 35px;
-  }
-  header .dropdown .dropbtn,
-  header .dropdown-content,
-  header .tarif-contact-avis a {
-    font-size: 0.8em;
-  }
-  .intro h1 {
-    font-size: 1.1em;
-  }
-  .intro h2,
-  .intro span {
-    font-size: 1em;
-  }
-  .intro p,
-  .intro .presentation-span,
-  .intro .liste-domaines-conteneur {
-    font-size: 1em;
-  }
-  .intro .photo {
-    padding-top: 5em;
-  }
-}
-
-/* Téléphones portables */
-@media (min-width: 320px) and (max-width: 360px) {
-  header .hamburger {
-    font-size: 1.5em;
-  }
-  body .intro {
-    width: 90%;
-    margin-top: 3em;
-  }
-  .intro h1 {
-    font-size: 1em;
-  }
-  .intro h2 {
-    font-size: 0.9em;
-  }
-  .intro p,
-  .intro .presentation-span,
-  .intro .liste-domaines-conteneur {
-    font-size: 0.9em;
-  }
-  .intro .separator {
-    width: 40%;
-  }
-  section .section-presentation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-  }
-  .presentation {
-    padding: 25px;
-  }
-  section .liste-domaines-conteneur {
-    margin: 0 -1em;
-  }
-  .liste-domaines,
-  .intro .presentation-span,
-  .presentation-text-content {
-    font-size: 0.8em;
-  }
-  .intro .liste-domaines span {
-    font-size: 1.1em;
-  }
-  footer {
-    width: 100%;
-    font-size: 14px;
-  }
-  .copyright-info {
-    font-size: 0.7rem;
-  }
-  footer .copyright-info a {
-    font-size: 1em;
-  }
 }

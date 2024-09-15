@@ -49,7 +49,7 @@
             </div>
 
             <!-- Titre de la page -->
-            <h1 class="title"> Les prédictions de Mélanie </h1>
+            <h1 class="title"> Mélanie Voyante </h1>
         </nav>
     </header>
 

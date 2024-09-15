@@ -34,16 +34,6 @@ body {
   flex-direction: column;
 }
 
-.parallax {
-  background-image: url(../images/melanie-voyante-2.jpg);
-  background-attachment: fixed;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  height: 42vh;
-}
-
 /* ---------------------------- 
  * Responsive Design 
  * ---------------------------- 
@@ -51,9 +41,6 @@ body {
 
 /* Tablettes et petits écrans */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .parallax {
-    height: 36vh;
-  }
   .liste-domaines-list-1 {
     margin-right: 40px;
   }
@@ -66,38 +53,14 @@ body {
   }
 }
 
-@media (max-width: 975px) {
-  header .parallax {
-    width: 100%;
-    height: 37vh;
-  }
-}
-
-@media (max-width: 880px) {
-  header .parallax {
-    width: 100%;
-    height: 34vh;
-  }
-}
-
-@media (max-width: 805px) {
-  header .parallax {
-    width: 100%;
-    height: 30vh;
-  }
-}
-
 /* Petites tablettes et grands téléphones */
 @media (max-width: 768px) {
-  header .parallax {
-    height: 28vh;
-  }
   header .hamburger {
     display: block;
-    font-size: 1.8em;
+    font-size: 1.5em;
     cursor: pointer;
     color: #fff;
-    top: 162px;
+    top: 15px;
   }
   section .section-presentation {
     display: flex;
@@ -127,85 +90,9 @@ body {
   }
 }
 
-@media (max-width: 706px) {
-  header .parallax {
-    height: 26vh;
-  }
-  header .hamburger {
-    top: 151px;
-  }
-}
-
-@media (max-width: 682px) {
-  header .parallax {
-    height: 25vh;
-  }
-  header .hamburger {
-    top: 145px;
-  }
-}
-
-@media (max-width: 674px) {
-  header .parallax {
-    height: 25vh;
-  }
-}
-
-@media (max-width: 622px) {
-  header .parallax {
-    height: 23vh;
-  }
-  header .hamburger {
-    top: 135px;
-  }
-}
-
-@media (max-width: 550px) {
-  header .parallax {
-    height: 20vh;
-  }
-  header .hamburger {
-    top: 120px;
-  }
-}
-
-@media (max-width: 480px) {
-  header .parallax {
-    height: 18vh;
-  }
-  header .hamburger {
-    top: 110px;
-  }
-  .intro .photo {
-    padding-top: 9em;
-  }
-}
-
-@media (max-width: 425px) {
-  header .parallax {
-    height: 16vh;
-  }
-  header .hamburger {
-    top: 100px;
-  }
-}
-
-@media (max-width: 380px) {
-  header .parallax {
-    height: 14vh;
-  }
-  header .hamburger {
-    top: 84px;
-  }
-}
-
 /* Téléphones portables */
 @media (min-width: 320px) and (max-width: 360px) {
-  header .parallax {
-    height: 13vh;
-  }
   header .hamburger {
-    top: 85px;
     font-size: 1.5em;
   }
   .photo {

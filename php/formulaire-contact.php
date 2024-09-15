@@ -1,5 +1,12 @@
 <?php
   require 'config.php';
+
+  // Vérifiez si l'utilisateur est connecté
+  if (!isLoggedIn()) {
+    // Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
+    header('Location: ./formulaire-connexion.php');
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -40,12 +47,30 @@
     <!-- Navigation principale -->
     <nav class="lien-page-header">
 
+    <div class="lien-home-connect">
       <!-- Logo maison accueil -->
       <div class="lien-home">
         <img class="back-home" src="../images/maison-accueil.png" alt="Retour à la page d'accueil"
           onclick="window.location.href='./accueil.php'">
         <span class="home"> Accueil </span>
       </div>
+
+      <?php if (isset($_SESSION['user_id'])): ?>
+      <!-- Icône de déconnexion avec un lien vers la page de déconnexion -->
+      <div class="lien-deconnect">
+        <img class="icone-connect" src="../images/deconnexion.png" alt="Aller à la page accueil"
+          onclick="window.location.href='./deconnexion.php'">
+        <span class="deconnect"> Déconnexion </span>
+      </div>
+      <?php else: ?>
+      <!-- Icône de connexion avec un lien vers la page de connexion -->
+      <div class="lien-connect">
+        <img class="icone-connect" src="../images/connexion.png" alt="Aller à la page de connexion"
+          onclick="window.location.href='./formulaire-connexion.php'">
+        <span class="connect"> Connexion </span>
+      </div>
+    </div>
+      <?php endif; ?>
 
       <div class="navbar">
         <!-- Menu déroulant pour Accueil -->
@@ -99,7 +124,6 @@
         </div>
       </div>
 
-      <div class="lien-contact">
         <!-- Liens directs pour Tarif, Contact, Avis clients et Horoscope -->
         <div class="tarif-contact-avis">
           <a href="../html/tarif.html"> Tarif </a>
@@ -107,23 +131,6 @@
           <a href="./formulaire-avis.php"> Avis </a>
           <a href="./formulaire-horoscope.php"> Horoscope </a>
         </div>
-
-        <?php if (isset($_SESSION['user_id'])): ?>
-        <!-- Icône de déconnexion avec un lien vers la page de déconnexion -->
-        <div class="lien-deconnect">
-          <img class="icone-connect" src="../images/deconnexion.png" alt="Aller à la page accueil"
-            onclick="window.location.href='./deconnexion.php'">
-          <span class="deconnect"> Déconnexion </span>
-        </div>
-        <?php else: ?>
-        <!-- Icône de connexion avec un lien vers la page de connexion -->
-        <div class="lien-connect">
-          <img class="icone-connect" src="../images/connexion.png" alt="Aller à la page de connexion"
-            onclick="window.location.href='./formulaire-connexion.php'">
-          <span class="connect"> Connexion </span>
-          </div>
-        </div>
-        <?php endif; ?>
     </nav>
   </header>
 
@@ -133,10 +140,6 @@
     <form action="./contact.php" method="POST">
       <?php if (isset($_SESSION['successMessages']['contact'])): ?>
       <span style="display: block; margin: 20px auto; padding: 10px; width: fit-content; border: 2px solid #4CAF50; background: #D4EDDA; color: #155724; border-radius: 5px; text-align: center; font-size: 16px;"> <?php echo $_SESSION['successMessages']['contact']; ?> </span>
-      <?php endif; ?>
-
-      <?php if (isset($_SESSION['errorMessages']['contact'])): ?>
-      <span style="display: block; margin: 20px auto; padding: 10px; width: fit-content; border: 2px solid #C62828; background: #FFEBEE; color: #C62828; border-radius: 5px; text-align: center; font-size: 16px;"> <?php echo $_SESSION['errorMessages']['contact']; ?> </span>
       <?php endif; ?>
 
       <h2> Contact </h2>

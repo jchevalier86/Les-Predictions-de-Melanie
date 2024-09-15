@@ -20,6 +20,7 @@
 body {
   background-image: url(../images/clairvoyance.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
 }
@@ -27,23 +28,26 @@ body {
 /* Petites tablettes et grands téléphones */
 @media (max-width: 768px) {
   .intro .photo {
-    width: 75%;
-    margin-right: 6em;
+    width: 90%;
+    margin: 2em 4em 0 0;
     padding: 0;
+  }
+  .photo-body-3 {
+    margin-left: 6.3em;
   }
 }
 
 @media (max-width: 480px) {
   .intro .photo {
-    width: 70%;
-    margin-right: 0;
-    padding: 0;
+    width: 90%;
+    margin: 7em 0 0 2em;
   }
 }
 
 /* Téléphones portables */
 @media (min-width: 320px) and (max-width: 360px) {
   .intro .photo {
-    margin: 7em 1em 0 0;
+    width: 90%;
+    margin: 10em 1em 0 0;
   }
 }

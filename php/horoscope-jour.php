@@ -34,9 +34,6 @@
 <body>
   <!-- En-tête de la page -->
   <header>
-    <!-- Ajout d'une image avec effet parallax -->
-    <div class="parallax"> </div>
-
     <!-- Ajout du bouton hamburger -->
     <div class="hamburger" onclick="toggleMenu()"> &#9776; </div>
 
@@ -106,7 +103,7 @@
       <div class="tarif-contact-avis">
         <a href="../html/tarif.html"> Tarif </a>
         <a href="./formulaire-contact.php"> Contact </a>
-        <a href="./formulaire-avis.php"> Avis clients </a>
+        <a href="./formulaire-avis.php"> Avis </a>
         <a href="./formulaire-horoscope.php"> Horoscope </a>
       </div>
     </nav>

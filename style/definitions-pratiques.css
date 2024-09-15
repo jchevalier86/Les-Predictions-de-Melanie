@@ -17,25 +17,8 @@
  * ---------------------------- 
 */
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  .lien-page-header {
-    flex-direction: column;
-    padding-bottom: 10px;
-  }
-  .back-home {
-    margin: 0 0 11px 11px;
-  }
-}
-
 /* Petites tablettes et grands téléphones */
 @media (max-width: 768px) {
-  .lien-page-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .back-home {
-    padding-left: 10px;
-  }
   .lien-home {
     padding-left: 15px;
   }
@@ -76,7 +59,7 @@
     gap: 3em;
   }
   .photo .photo-body-3 {
-    margin-left: 3em;
+    margin-left: 2.5em;
   }
   .presentation-text-content {
     padding: 0 12px;
@@ -90,7 +73,7 @@
     height: 85%;
   }
   .photo-pratique-voyance {
-    padding-left: 2em;
+    padding-left: 3em;
   }
   .photo {
     padding: 0 0 0 2em;
@@ -110,6 +93,12 @@
   }
   .section3-col3 {
     gap: 8em;
+  }
+  .photo .photo-body-3 {
+    margin-left: 3.5em;
+  }
+  .photo-pratique-voyance {
+    padding-left: 2em;
   }
   .photo {
     padding: 0 0 0 2.5em;
@@ -169,19 +158,19 @@
 .photo-body-2,
 .photo-body-2-pratique {
   width: 420px;
-  height: 329px;
+  height: auto;
 }
 
 .photo-body-3,
 .photo-body-3-pratique {
-  width: 60%;
+  width: 66%;
   height: auto;
   margin-bottom: 3em;
 }
 
 .photo-body-3 {
   margin-top: 9em;
-  margin-left: 8em;
+  margin-left: 6.5em;
 }
 
 .photo-body-1-pratique,

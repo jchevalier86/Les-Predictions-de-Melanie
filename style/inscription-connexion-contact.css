@@ -67,18 +67,12 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
-  .tarif-contact-avis {
-    flex-direction: column;
-    align-items: end;
-    padding-right: 50px;
-    width: 100%;
-  }
   .back-home {
     height: 1.3em;
     padding-left: 20px;
   }
   .title {
-    font-size: 1em;
+    font-size: 1.3em;
   }
   .container,
   .container-2 {
@@ -95,9 +89,6 @@ body {
 
 /* Téléphones portables */
 @media (min-width: 320px) and (max-width: 360px) {
-  .title {
-    font-size: 0.9em;
-  }
   .container,
   .container-2 {
     max-width: 90%;
@@ -147,10 +138,6 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
 }
-
-/* .container {
-  overflow: scroll;
-} */
 
 h2 {
   font-size: 24px;
