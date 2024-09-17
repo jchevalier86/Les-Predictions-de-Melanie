@@ -33,6 +33,10 @@
 
 <body>
     <header>
+      <div class="photo-header">
+        <img class="photo-logo" src="../images/melanie-voyante-2.jpg" alt="Logo Mélanie Voyante">
+      </div>
+
       <!-- Ajout du bouton hamburger -->
       <div class="hamburger" onclick="toggleMenu()"> &#9776; </div>
 
@@ -119,7 +123,7 @@
 
     <!-- Section d'introduction -->
     <section class="intro">
-      <h1>Mélanie Voyante</h1>
+      <h1>Les Prédictions de Mélanie</h1>
       <hr class="separator">
       <h2>Voyance et Cartomancie</h2>
 

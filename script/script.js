@@ -8,9 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const photoBody1 = document.querySelector(".photo-body-1");
   const photoBody2 = document.querySelector(".photo-body-2");
   const photoBody3 = document.querySelector(".photo-body-3");
-  const photoBody1Pratique = document.querySelector(".photo-body-1-pratique");
-  const photoBody2Pratique = document.querySelector(".photo-body-2-pratique");
-  const photoBody3Pratique = document.querySelector(".photo-body-3-pratique");
 
   // Vérifie et ajoute la classe "show" si les éléments existent
   if (presentation) {
@@ -27,14 +24,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   if (photoBody3) {
     photoBody3.classList.add("show");
-  }
-  if (photoBody1Pratique) {
-    photoBody1Pratique.classList.add("show");
-  }
-  if (photoBody2Pratique) {
-    photoBody2Pratique.classList.add("show");
-  }
-  if (photoBody3Pratique) {
-    photoBody3Pratique.classList.add("show");
   }
 });

@@ -29,7 +29,7 @@ html {
 }
 
 body {
-  flex: 1; /* Permet de s'étendre pour occuper l'espace restant */
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
@@ -55,13 +55,6 @@ body {
 
 /* Petites tablettes et grands téléphones */
 @media (max-width: 768px) {
-  header .hamburger {
-    display: block;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: #fff;
-    top: 15px;
-  }
   section .section-presentation {
     display: flex;
     flex-direction: column;
@@ -97,9 +90,6 @@ body {
 
 /* Téléphones portables */
 @media (min-width: 320px) and (max-width: 360px) {
-  header .hamburger {
-    font-size: 1.5em;
-  }
   .photo {
     margin-top: 1em;
     display: flex;

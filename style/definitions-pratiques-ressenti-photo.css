@@ -18,45 +18,61 @@
 */
 
 body {
-  background-image: url(../images/clairvoyance.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url(../images/);
+  background-size: contain;
   background-attachment: fixed;
   background-position: center;
 }
 
+/* --------------------------- 
+ * Responsive Design 
+ * ---------------------------- 
+*/
+
 /* Petites tablettes et grands téléphones */
 @media (max-width: 768px) {
-  .intro .photo {
+  .lien-home {
+    padding-left: 15px;
+  }
+  .presentation.show {
+    padding: 20px 0;
+  }
+  .presentation-text-content {
+    padding: 0 25px;
+    font-size: 16px;
+  }
+  .photo {
+    display: contents;
+  }
+  .photo .photo-body-3 {
     width: 90%;
-    margin: 2em 4em 0 0;
-    padding: 0;
-  }
-  .photo-body-3 {
-    margin-left: 6.3em;
-  }
-  .photo-pratique {
-    padding-right: 4em;
-    margin: 0;
+    height: auto;
+    margin-bottom: 2em;
   }
 }
 
-@media (max-width: 480px) {
-  .intro .photo {
+@media (min-width: 420px) and (max-width: 480px) {
+  .intro {
     width: 90%;
-    margin: 7em 0 0 2em;
+  }
+  .presentation-text-content {
+    font-size: 14px;
+  }
+  .photo {
+    display: contents;
+  }
+  .photo .photo-body-3 {
+    width: 70%;
+    height: auto;
   }
 }
 
 /* Téléphones portables */
-@media (min-width: 320px) and (max-width: 360px) {
-  .intro .photo {
-    width: 90%;
-    margin: 10em 1em 0 0;
+@media (min-width: 320px) and (max-width: 420px) {
+  .presentation-text-content {
+    font-size: 13px;
   }
-}
-
-.photo {
-  padding-right: 10em;
-  padding-top: 8em;
+  .photo .photo-body-3 {
+    width: 75%;
+  }
 }
