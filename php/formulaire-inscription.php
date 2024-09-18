@@ -1,6 +1,6 @@
 <?php
-  require 'config.php';
-  require 'function.php';
+  require './config.php';
+  require './function.php';
 
   // Vérifier si l'utilisateur est connecté
   $isConnected = isset($_SESSION['user_id']);

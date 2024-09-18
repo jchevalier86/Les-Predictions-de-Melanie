@@ -1,6 +1,6 @@
 <?php
     // Inclusion des configurations et fonctions communes
-    require 'config.php';
+    require './config.php';
 
     // Inclure PHPMailer
     require '../libs/PHPMailer/src/PHPMailer.php';
@@ -31,7 +31,7 @@
     // Vérification que l'utilisateur est connecté
     if (!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {
         $_SESSION['errorMessages']['contact'] = "Vous devez être connecté pour envoyer un message.";
-        header("Location: formulaire-contact.php");
+        header("Location: ./formulaire-contact.php");
         exit();
     }
 
@@ -83,7 +83,7 @@
 
         if (!empty($errorMessages)) {
             $_SESSION['errorMessages'] = $errorMessages;
-            header("Location: formulaire-contact.php");
+            header("Location: ./formulaire-contact.php");
             exit();
         }
 
@@ -168,7 +168,7 @@
 
                     $mail->send();
                     $_SESSION['successMessages']['contact'] = "Votre message a été envoyé avec succès !";
-                    header ('Location: formulaire-contact.php');
+                    header ('Location: ./formulaire-contact.php');
                     exit();
                 } catch (Exception $e) {
                     echo 'Le message n\'a pas pu être envoyé. Erreur de messagerie: ' . htmlspecialchars($mail->ErrorInfo);

@@ -8,6 +8,6 @@
     session_unset(); // Supprimer toutes les variables de session
     // Détruire la session pour déconnecter l'utilisateur
     session_destroy();
-    header('Location: accueil.php');
+    header('Location: ./accueil.php');
     exit();
 ?>

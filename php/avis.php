@@ -1,6 +1,6 @@
 <?php
     // Inclure les configurations et fonctions communes
-    require 'config.php';
+    require './config.php';
 
     // Inclure PHPMailer
     require '../libs/PHPMailer/src/PHPMailer.php';
@@ -31,7 +31,7 @@
     // Vérification que l'utilisateur est connecté
     if (!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {
         $_SESSION['errorMessages']['avis'] = "Vous devez être connecté pour envoyer un avis.";
-        header("Location: formulaire-avis.php");
+        header("Location: ./formulaire-avis.php");
         exit();
     }
 
@@ -115,7 +115,7 @@
                                     Nom : " . htmlspecialchars($avis_clients_nom) . "\n
                                     Prenom : " . htmlspecialchars($avis_clients_prenom) . "\n
                                     Email : " . htmlspecialchars($avis_clients_email) . "\n
-                                    Avis :\n" . htmlspecialchars($avis_clients_avis);
+                                    Avis :\n" . htmlspecialchars($avis_clients_avis) . "\n";
                     $mail->send();
 
                     // Réinitialiser les destinataires et contenu pour l'email à l'utilisateur
@@ -142,7 +142,7 @@
                     $mail->send();
                     // Redirection ou message de succès
                     $_SESSION['successMessages']['avis'] = "Votre avis a été soumis avec succès.";
-                    header('Location: formulaire-avis.php');
+                    header('Location: ./formulaire-avis.php');
                     exit();
                 } catch (Exception $e) {
                     echo 'Le message n\'a pas pu être envoyé. Erreur de messagerie: ' . htmlspecialchars($mail->ErrorInfo);

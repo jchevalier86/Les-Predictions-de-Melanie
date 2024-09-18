@@ -1,6 +1,6 @@
 <?php
-    require 'config.php';
-    require 'function.php';
+    require './config.php';
+    require './function.php';
 
     // Démarrer la session si elle n'est pas déjà démarrée
     if (session_status() === PHP_SESSION_NONE) {
@@ -30,33 +30,33 @@
                     $stmt_update->bind_param("s", $token);
                     if ($stmt_update->execute()) {
                         $_SESSION['successMessages']['confirmation'] = "Votre adresse e-mail a été confirmée avec succès.";
-                        header("Location: formulaire-connexion.php");
+                        header("Location: ./formulaire-connexion.php");
                         exit();
                     } else {
                         $_SESSION['errorMessages']['confirmation'] = "Erreur lors de la confirmation de l'adresse e-mail.";
-                        header("Location: formulaire-connexion.php");
+                        header("Location: ./formulaire-connexion.php");
                         exit();
                     }
                     $stmt_update->close();
                 } else {
                     $_SESSION['errorMessages']['confirmation'] = "Erreur de préparation de la requête de confirmation : " . $conn->error;
-                    header("Location: formulaire-connexion.php");
+                    header("Location: ./formulaire-connexion.php");
                     exit();
                 }
             } else {
                 $_SESSION['errorMessages']['confirmation'] = "Token de confirmation invalide.";
-                header("Location: formulaire-connexion.php");
+                header("Location: ./formulaire-connexion.php");
                 exit();
             }
             $stmt->close();
         } else {
             $_SESSION['errorMessages']['confirmation'] = "Erreur de préparation de la requête de vérification : " . $conn->error;
-            header("Location: formulaire-connexion.php");
+            header("Location: ./formulaire-connexion.php");
             exit();
         }
     } else {
         $_SESSION['errorMessages']['confirmation'] = "Token de confirmation manquant.";
-        header("Location: formulaire-connexion.php");
+        header("Location: ./formulaire-connexion.php");
         exit();
     }
 

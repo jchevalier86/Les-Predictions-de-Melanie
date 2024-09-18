@@ -1,7 +1,7 @@
 <?php
     // Inclure le fichier de configuration pour la connexion à la base de données et les fonctions utilitaires
-    require 'config.php';
-    require 'function.php';
+    require './config.php';
+    require './function.php';
 
     // Inclure les librairies PHPMailer
     require '../libs/PHPMailer/src/PHPMailer.php';
@@ -22,7 +22,7 @@
     // Vérifier si l'utilisateur est déjà connecté
     if (isLoggedIn()) {
         $_SESSION['errorMessages']['isLoggedIn'] = "Vous êtes déjà connecté !";
-        header("Location: mot-de-passe-perdu.php");
+        header("Location: ./mot-de-passe-perdu.php");
         exit();
     }
 
@@ -56,10 +56,13 @@
                 // Générer un token unique pour la réinitialisation
                 $token = bin2hex(random_bytes(32));
 
-                // Préparer la requête pour insérer le token dans la base de données
-                $stmt = $conn->prepare("INSERT INTO password_resets (user_id, token) VALUES (?, ?)");
+                // Générer une date d'expiration (par exemple, le token expire dans 1 heure)
+                $expirationDate = date('Y-m-d H:i:s', strtotime('+1 hour'));
+
+                // Préparer la requête pour insérer le token avec expiration et statut utilisé
+                $stmt = $conn->prepare("INSERT INTO password_resets (user_id, token, expiration_date, used) VALUES (?, ?, ?, 0)");
                 if ($stmt) {
-                    $stmt->bind_param("is", $user['user_id'], $token);
+                    $stmt->bind_param("iss", $user['user_id'], $token, $expirationDate);
                     $stmt->execute();
 
                     // Générer le lien de réinitialisation du mot de passe
@@ -73,11 +76,11 @@
                         $mail->Host = $_ENV['SMTP_HOST'];
                         $mail->SMTPAuth = true;
                         $mail->Username = $_ENV['SMTP_USER'];
-                        $mail->Password = $_ENV['SMTP_PASS']; // J'utilise des variables d'environnement dans le fichier .env qui se trouve à la racine de mon projet
+                        $mail->Password = $_ENV['SMTP_PASS']; // Utilisation des variables d'environnement
                         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                         $mail->Port = $_ENV['SMTP_PORT'];
 
-                        // Désactiver la vérification du certificat SSL pour le développement local
+                        // Désactiver la vérification SSL pour le développement local
                         $mail->SMTPOptions = [
                             'ssl' => [
                                 'verify_peer' => false,
@@ -91,8 +94,8 @@
                         $mail->addAddress($email);
 
                         $mail->isHTML(true);
-                        $mail->CharSet = 'UTF-8'; // Définir l'encodage en UTF-8
-                        $mail->Encoding = 'base64'; // Encodage du message
+                        $mail->CharSet = 'UTF-8';
+                        $mail->Encoding = 'base64';
                         $mail->Subject = 'Réinitialisation de votre mot de passe';
                         $mail->Body = "Bonjour,<br><br>Cliquez sur le lien suivant pour réinitialiser votre mot de passe :<br><br><a href='$resetLink'>$resetLink</a><br><br>Si vous n'avez pas demandé de réinitialisation, ignorez cet email.";
                         $mail->AltBody = "Bonjour,\n\nCliquez sur le lien suivant pour réinitialiser votre mot de passe :\n\n$resetLink\n\nSi vous n'avez pas demandé de réinitialisation, ignorez cet email.";
@@ -100,7 +103,7 @@
                         // Envoyer l'email
                         $mail->send();
                         $_SESSION['successMessages']['password_perdu'] = "Un email de réinitialisation a été envoyé";
-                        header ('Location: mot-de-passe-perdu.php');
+                        header ('Location: ./mot-de-passe-perdu.php');
                         exit();
                     } catch (Exception $e) {
                         // Gestion des erreurs d'envoi d'email
@@ -117,7 +120,7 @@
             } else {
                 // Aucun utilisateur trouvé avec cet e-mail
                 $_SESSION['errorMessages']['email'] = "* Aucun utilisateur trouvé avec cet e-mail.";
-                header("Location: mot-de-passe-perdu.php");
+                header("Location: ./mot-de-passe-perdu.php");
                 exit();
             }
             $stmt->close();

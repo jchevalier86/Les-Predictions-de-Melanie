@@ -1,6 +1,6 @@
 <?php
-    require 'config.php';
-    require 'function.php';
+    require './config.php';
+    require './function.php';
 
     // Vérifier si l'utilisateur est connecté
     $isConnected = isset($_SESSION['utilisateurs_id']);
@@ -88,14 +88,12 @@
                 <!-- Liens vers les réseaux sociaux et PayPal -->
                 <a class="logo-footer" href="https://www.instagram.com/melanievoyante/" target="_blank">
                     <img src="../images/instagram.png" alt="Logo Instagram">
-                    <!-- <i class="fab fa-instagram fa-2x instagram-logo"> </i> -->
                     <span class="insta-paypal-mail"> Suivez-moi sur Instagram </span>
                 </a>
             </div>
             <div class="social-link">
                 <a class="logo-footer" href="https://www.paypal.me/maupin20" target="_blank">
                     <img src="../images/paypal.png" alt="Logo Paypal">
-                    <!-- <i class="fa-brands fa-paypal fa-2xl paypal-logo"> </i> -->
                     <span class="insta-paypal-mail"> PayPal </span>
                 </a>
             </div>
@@ -104,7 +102,6 @@
             <div class="social-link">
                 <a class="logo-footer " href="mailto:les-predictions-de-melanie@outlook.com" target="_blank">
                     <img src="../images/gmail.png" alt="Logo Gmail">
-                    <!-- <i class="fa-regular fa-envelope fa-2xl gmail-logo"></i> -->
                     <span class="insta-paypal-mail"> Contactez-moi par mail </span>
                 </a>
             </div>

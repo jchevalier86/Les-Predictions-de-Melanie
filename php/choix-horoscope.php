@@ -3,9 +3,9 @@
         $type = $_POST['type'];
 
         if ($type === 'jour') {
-            header("Location: horoscope-jour.php");
+            header("Location: ./horoscope-jour.php");
         } elseif ($type === 'hebdomadaire') {
-            header("Location: horoscope-hebdomadaire.php");
+            header("Location: ./horoscope-hebdomadaire.php");
         } else {
             echo "Type d'horoscope non valide.";
         }

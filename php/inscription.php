@@ -1,7 +1,7 @@
 <?php
     // Inclusion des configurations et fonctions communes
-    require 'config.php';
-    require 'function.php';
+    require './config.php';
+    require './function.php';
 
     // Inclure les librairies PHPMailer
     require '../libs/PHPMailer/src/PHPMailer.php';
@@ -30,14 +30,14 @@
     // Vérifier si l'utilisateur est déjà connecté
     if (isLoggedIn()) {
         $_SESSION['errorMessages']['isLoggedIn'] = "Vous êtes déjà connecté !";
-        header("Location: formulaire-inscription.php");
+        header("Location: ./formulaire-inscription.php");
         exit();
     }
 
     // Vérification que tous les champs de formulaire nécessaires sont définis
     if (!isset($_POST['nom'], $_POST['prenom'], $_POST['date_naissance'], $_POST['email'], $_POST['phone'], $_POST['mot_de_passe'], $_POST['confirmation_mot_de_passe'])) {
         $_SESSION['errorMessages'] = ["Tous les champs ne sont pas remplis."];
-        header("Location: formulaire-inscription.php");
+        header("Location: ./formulaire-inscription.php");
         exit();
     }
 
@@ -78,7 +78,7 @@
 
     if (!empty($errorMessages)) {
         $_SESSION['errorMessages'] = $errorMessages;
-        header("Location: formulaire-inscription.php");
+        header("Location: ./formulaire-inscription.php");
         exit();
     }
 
@@ -100,7 +100,7 @@
         $result_check = $stmt_check->get_result();
         if ($result_check->num_rows > 0) {
             $_SESSION['errorMessages']['email'] = "* Cet utilisateur est déjà inscrit avec cet email.";
-            header("Location: formulaire-inscription.php");
+            header("Location: ./formulaire-inscription.php");
             exit();
         } else {
             // Préparation de la requête SQL d'insertion
@@ -208,24 +208,24 @@
 
                     // Redirection avec un message de succès
                     $_SESSION['successMessages']['inscription'] = "Inscription réussie ! Veuillez vérifier votre e-mail pour confirmer votre adresse.";
-                    header("Location: formulaire-connexion.php");
+                    header("Location: ./formulaire-connexion.php");
                     exit();
                 } else {
                     $_SESSION['errorMessages'] = ["Erreur lors de l'insertion des données : " . $stmt->error];
-                    header("Location: formulaire-inscription.php");
+                    header("Location: ./formulaire-inscription.php");
                     exit();
                 }
                 $stmt->close();
             } else {
                 $_SESSION['errorMessages'] = ["Erreur de préparation de la requête : " . $conn->error];
-                header("Location: formulaire-inscription.php");
+                header("Location: ./formulaire-inscription.php");
                 exit();
             }
         }
         $stmt_check->close();
     } else {
         $_SESSION['errorMessages'] = ["Erreur de préparation de la requête de vérification : " . $conn->error];
-        header("Location: formulaire-inscription.php");
+        header("Location: ./formulaire-inscription.php");
         exit();
     }
 

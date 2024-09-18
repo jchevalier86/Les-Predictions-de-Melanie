@@ -1,0 +1,29 @@
+/* style sur la page définition cartomancie */
+
+/* --------------------------- 
+ * Global Reset
+ * ---------------------------- 
+*/
+
+/* Applique box-sizing à tous les éléments */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* --------------------------- 
+ * Body
+ * ---------------------------- 
+*/
+
+body {
+  background: linear-gradient(
+    135deg,
+    #f4f4f9,
+    #fbc02d,
+    #ff5722,
+    #455a64,
+    #0288d1
+  );
+}

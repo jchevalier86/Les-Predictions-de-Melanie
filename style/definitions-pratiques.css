@@ -22,6 +22,59 @@
   cursor: pointer;
 }
 
+/* --------------------------- 
+ * Responsive Design 
+ * ---------------------------- 
+*/
+
+/* Petites tablettes et grands téléphones */
+@media (max-width: 768px) {
+  .lien-home {
+    padding-left: 15px;
+  }
+  .presentation.show {
+    padding: 20px 0;
+  }
+  .presentation-text-content {
+    padding: 0 25px;
+    font-size: 16px;
+  }
+  .photo {
+    display: contents;
+  }
+  .photo .photo-body {
+    width: 90%;
+    height: auto;
+    margin-bottom: 2em;
+  }
+}
+
+@media (min-width: 420px) and (max-width: 480px) {
+  .intro {
+    width: 90%;
+  }
+  .presentation-text-content {
+    font-size: 14px;
+  }
+  .photo {
+    display: contents;
+  }
+  .photo .photo-body {
+    width: 70%;
+    height: auto;
+  }
+}
+
+/* Téléphones portables */
+@media (min-width: 320px) and (max-width: 420px) {
+  .presentation-text-content {
+    font-size: 13px;
+  }
+  .photo .photo-body {
+    width: 75%;
+  }
+}
+
 /* 
   * --------------------------- 
   * Main 
@@ -36,9 +89,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.photo-body-1,
-.photo-body-2,
-.photo-body-3 {
+.photo-body {
   max-width: 420px;
   width: 100%;
   max-height: 290px;

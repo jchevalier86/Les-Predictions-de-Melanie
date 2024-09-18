@@ -1,0 +1,22 @@
+/* style sur la page définition ressenti photo */
+
+/* --------------------------- 
+ * Global Reset
+ * ---------------------------- 
+*/
+
+/* Applique box-sizing à tous les éléments */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* --------------------------- 
+ * Body
+ * ---------------------------- 
+*/
+
+body {
+  background: linear-gradient(135deg, #000428, #004e92, #90dffe, #ffffff);
+}

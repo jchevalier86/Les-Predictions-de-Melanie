@@ -1,6 +1,6 @@
 <?php
-    require 'config.php'; // Inclure le fichier de connexion
-    require 'function.php';
+    require './config.php'; // Inclure le fichier de connexion
+    require './function.php';
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $token = $_POST['token'];
@@ -12,13 +12,18 @@
             header("Location: reset_password.php?token=$token");
             exit();
         }
+        if (strlen($newPassword) < 8 || strlen($confirmation_mot_de_passe) < 8) {
+            $_SESSION['errorMessages']['longueur_mot_de_passe'] = "* Votre mot de passe doit contenir 8 caractères minimum.";
+            header("Location: reset_password.php?token=$token");
+            exit();
+        }
 
         $newPassword = password_hash($_POST['mot_de_passe'], PASSWORD_BCRYPT);
 
         $conn = openConnection(); // Ouvrir la connexion
 
-        // Rechercher le jeton dans la base de données
-        $stmt = $conn->prepare("SELECT user_id FROM password_resets WHERE token = ?");
+        // Rechercher le jeton dans la base de données et vérifier qu'il n'est pas expiré ou utilisé
+        $stmt = $conn->prepare("SELECT user_id FROM password_resets WHERE token = ? AND used = 0 AND expiration_date > NOW()");
         if ($stmt) {
             $stmt->bind_param("s", $token);
             $stmt->execute();
@@ -32,13 +37,13 @@
                     $stmt->bind_param("si", $newPassword, $resetRequest['user_id']);
                     $stmt->execute();
 
-                    // Supprimer le jeton après utilisation
-                    $stmt = $conn->prepare("DELETE FROM password_resets WHERE token = ?");
+                    // Marquer le token comme utilisé après réinitialisation
+                    $stmt = $conn->prepare("UPDATE password_resets SET used = 1 WHERE token = ?");
                     if ($stmt) {
                         $stmt->bind_param("s", $token);
                         $stmt->execute();
                         $_SESSION['successMessages']['password_reset'] = "Votre mot de passe a été réinitialisé avec succès !";
-                        header ('Location: formulaire-connexion.php');
+                        header ('Location: ./formulaire-connexion.php');
                         exit();
                     } else {
                         echo "Erreur de préparation de la requête : " . $conn->error;
@@ -47,7 +52,7 @@
                     echo "Erreur de préparation de la requête : " . $conn->error;
                 }
             } else {
-                echo '<script>alert("Jeton de réinitialisation invalide.");</script>';
+                echo '<script>alert("Jeton de réinitialisation invalide ou expiré.");</script>';
             }
             $stmt->close();
         } else {
@@ -118,6 +123,9 @@
             <!-- Champ pour entrer le nouveau mot de passe -->
             <label for="mot_de_passe"> Nouveau mot de passe <span class="star">*</span> </label>
             <input type="password" id="mot_de_passe" name="mot_de_passe" placeholder="Créer votre nouveau mot de passe" required>
+            <?php if (isset($_SESSION['errorMessages']['longueur_mot_de_passe'])): ?>
+            <span style="color: red; font-size: 14px;"> <?php echo $_SESSION['errorMessages']['longueur_mot_de_passe']; ?> </span>
+            <?php endif; ?>
             <?php if (isset($_SESSION['errorMessages']['mot_de_passe'])): ?>
             <span style="color: red; font-size: 14px;"> <?php echo $_SESSION['errorMessages']['mot_de_passe']; ?> </span>
             <?php endif; ?>
@@ -141,7 +149,6 @@
                 <!-- Liens vers les réseaux sociaux et PayPal -->
                 <a class="logo-footer" href="https://www.instagram.com/melanievoyante/" target="_blank">
                     <img src="../images/instagram.png" alt="Logo Instagram">
-                    <!-- <i class="fab fa-instagram fa-2x instagram-logo"> </i> -->
                     <span class="insta-paypal-mail"> Suivez-moi sur Instagram </span>
                 </a>
             </div>
@@ -149,7 +156,6 @@
             <div class="social-link">
                 <a class="logo-footer" href="https://www.paypal.me/maupin20" target="_blank">
                     <img src="../images/paypal.png" alt="Logo Paypal">
-                    <!-- <i class="fa-brands fa-paypal fa-2xl paypal-logo"> </i> -->
                     <span class="insta-paypal-mail"> PayPal </span>
                 </a>
             </div>
@@ -158,7 +164,6 @@
             <div class="social-link">
                 <a class="logo-footer " href="mailto:les-predictions-de-melanie@outlook.com" target="_blank">
                     <img src="../images/gmail.png" alt="Logo Gmail">
-                    <!-- <i class="fa-regular fa-envelope fa-2xl gmail-logo"></i> -->
                     <span class="insta-paypal-mail"> Contactez-moi par mail </span>
                 </a>
             </div>

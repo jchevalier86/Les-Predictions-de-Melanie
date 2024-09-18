@@ -1,0 +1,22 @@
+/* style sur la page définition voyance */
+
+/* --------------------------- 
+ * Global Reset
+ * ---------------------------- 
+*/
+
+/* Applique box-sizing à tous les éléments */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* --------------------------- 
+ * Body
+ * ---------------------------- 
+*/
+
+body {
+  background: linear-gradient(135deg, #8b0000, #d32f2f, #ff8a80, #2c2c2c);
+}

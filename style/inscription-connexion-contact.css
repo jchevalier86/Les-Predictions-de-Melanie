@@ -71,8 +71,11 @@ body {
     height: 1.3em;
     padding-left: 20px;
   }
+  .lien-home {
+    padding: 0;
+  }
   .title {
-    font-size: 1.3em;
+    font-size: 1em;
   }
   .container,
   .container-2 {

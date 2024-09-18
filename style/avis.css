@@ -59,12 +59,6 @@ body {
     align-items: flex-start;
     padding-left: 15px;
   }
-  .tarif-contact-avis {
-    flex-direction: column;
-    align-items: flex-end;
-    padding-right: 50px;
-    width: 100%;
-  }
   .navbar {
     display: flex;
     flex-direction: column;
@@ -84,13 +78,6 @@ body {
   }
   .avis-container {
     max-width: 90%;
-  }
-}
-
-@media (max-width: 480px) {
-  .tarif-contact-avis {
-    align-items: flex-start;
-    padding-left: 14px;
   }
 }
 
@@ -116,7 +103,7 @@ body {
   margin-top: 110px;
   margin-bottom: 70px;
   background-color: #fff;
-  padding: 20px;
+  padding: 10px 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

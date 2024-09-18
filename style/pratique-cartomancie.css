@@ -1,0 +1,25 @@
+/* style sur le page pratique cartomancie */
+
+/* --------------------------- 
+ * Global Reset
+ * ---------------------------- 
+*/
+
+/* Applique box-sizing à tous les éléments */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* --------------------------- 
+ * Body 
+ * ---------------------------- 
+*/
+
+body {
+  background-image: url(../images/oracle-ge.jpeg);
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: bottom;
+}

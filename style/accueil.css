@@ -55,6 +55,26 @@ body {
 
 /* Petites tablettes et grands téléphones */
 @media (max-width: 768px) {
+  header .hamburger {
+    font-size: 1.5em;
+    position: absolute;
+    top: 9px;
+    right: 25px;
+    z-index: 2000;
+    cursor: pointer;
+    color: #fff;
+    display: block;
+    background: none;
+    border: none;
+    outline: none;
+  }
+  .hamburger-container {
+    background: linear-gradient(90deg, rgb(15, 0, 146), rgb(176, 0, 176));
+    padding: 15px;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
   section .section-presentation {
     display: flex;
     flex-direction: column;
