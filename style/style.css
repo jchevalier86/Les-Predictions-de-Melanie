@@ -28,6 +28,7 @@ html {
 }
 
 body {
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -124,6 +125,22 @@ body {
   .lien-deconnect,
   .lien-home {
     padding: 2em 0 0 0.5em;
+  }
+  header .connect,
+  header .deconnect,
+  header .home,
+  footer .insta-paypal-mail {
+    position: absolute;
+  }
+  header .connect,
+  header .deconnect,
+  header .home {
+    top: 110%;
+    left: 50%;
+  }
+  footer .insta-paypal-mail {
+    top: 58%;
+    left: 0;
   }
   .social-link {
     padding-bottom: 3em;
@@ -315,7 +332,7 @@ nav {
 .photo-logo {
   max-width: 1990px;
   width: 100%;
-  max-height: 180px;
+  max-height: 190px;
   height: auto;
 }
 
@@ -497,7 +514,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 1em;
   overflow-y: auto;
   min-height: 340px;
