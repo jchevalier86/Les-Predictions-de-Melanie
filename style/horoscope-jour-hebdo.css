@@ -61,17 +61,23 @@ body {
     width: 100%;
   }
   .back-home {
-    margin-bottom: 10px;
     padding-left: 20px;
   }
-  .back-home {
-    padding-left: 20px;
+  .lien-home {
+    padding-bottom: 2em;
+    padding-top: 3em;
   }
   .body-image h1 {
     font-size: 20px;
   }
   .horoscope h2 {
     margin: 30px 20px;
+  }
+  .lien-page-footer {
+    justify-content: flex-start;
+  }
+  footer {
+    height: 600px;
   }
 }
 
@@ -127,5 +133,5 @@ h1 {
 */
 
 footer {
-  min-height: 500px;
+  height: 300px;
 }

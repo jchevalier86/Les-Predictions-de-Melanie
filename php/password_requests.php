@@ -1,7 +1,7 @@
 <?php
     // Inclure le fichier de configuration pour la connexion à la base de données et les fonctions utilitaires
-    require './config.php';
-    require './function.php';
+    require 'config.php';
+    require 'function.php';
 
     // Inclure les librairies PHPMailer
     require '../libs/PHPMailer/src/PHPMailer.php';
@@ -22,7 +22,7 @@
     // Vérifier si l'utilisateur est déjà connecté
     if (isLoggedIn()) {
         $_SESSION['errorMessages']['isLoggedIn'] = "Vous êtes déjà connecté !";
-        header("Location: ./mot-de-passe-perdu.php");
+        header("Location: mot-de-passe-perdu.php");
         exit();
     }
 
@@ -39,7 +39,7 @@
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             echo '<script>
             alert("L\'adresse email fournie est invalide.");
-            window.location.href = "./mot-de-passe-perdu.php";
+            window.location.href = "mot-de-passe-perdu.php";
             </script>';
             exit();
         }
@@ -103,13 +103,13 @@
                         // Envoyer l'email
                         $mail->send();
                         $_SESSION['successMessages']['password_perdu'] = "Un email de réinitialisation a été envoyé";
-                        header ('Location: ./mot-de-passe-perdu.php');
+                        header ('Location: mot-de-passe-perdu.php');
                         exit();
                     } catch (Exception $e) {
                         // Gestion des erreurs d'envoi d'email
                         echo '<script>
                         alert("Une erreur est survenue lors de l\'envoi de l\'email. Erreur : ' . htmlspecialchars($mail->ErrorInfo, ENT_QUOTES, 'UTF-8') . '");
-                        window.location.href = "./mot-de-passe-perdu.php";
+                        window.location.href = "mot-de-passe-perdu.php";
                         </script>';
                         exit();
                     }
@@ -120,7 +120,7 @@
             } else {
                 // Aucun utilisateur trouvé avec cet e-mail
                 $_SESSION['errorMessages']['email'] = "* Aucun utilisateur trouvé avec cet e-mail.";
-                header("Location: ./mot-de-passe-perdu.php");
+                header("Location: mot-de-passe-perdu.php");
                 exit();
             }
             $stmt->close();

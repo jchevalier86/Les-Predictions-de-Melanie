@@ -1,6 +1,6 @@
 <?php
-    require './config.php';
-    require './function.php';
+    require 'config.php';
+    require 'function.php';
 
     // Vérifier si l'utilisateur est connecté
     $isConnected = isset($_SESSION['utilisateur_id']);
@@ -44,7 +44,7 @@
             <!-- Logo maison accueil -->
             <div class="lien-home">
                 <img class="back-home" src="../images/maison-accueil.png" alt="Retour à la page d'accueil"
-                    onclick="window.location.href='./accueil.php'">
+                    onclick="window.location.href='accueil.php'">
                 <span class="home"> Accueil </span>
             </div>
 
@@ -56,7 +56,7 @@
     <!-- Section du formulaire d'avis -->
     <div class="container-2">
 
-        <form action="./connexion.php" method="POST">
+        <form action="connexion.php" method="POST">
             <?php if (isset($_SESSION['successMessages']['inscription'])): ?>
             <span style="display: block; margin: 20px auto; padding: 10px; width: fit-content; border: 2px solid #4CAF50; background: #D4EDDA; color: #155724; border-radius: 5px; text-align: center; font-size: 16px;"> <?php echo $_SESSION['successMessages']['inscription']; ?> </span>
             <?php endif; ?>
@@ -104,7 +104,7 @@
             
             <div class="inscription-google">
                 <!-- Lien pour s'inscrire si c'est la première visite -->
-                <p> Première visite ? <a href="./formulaire-inscription.php"> Inscrivez-vous </a></p>
+                <p> Première visite ? <a href="formulaire-inscription.php"> Inscrivez-vous </a></p>
                 <br>
 
                 <!-- <div class="compte-google">
@@ -144,29 +144,39 @@
         </div>
 
         <div class="nav-links-2">
-            <ul>
-                <li><a href="./accueil.php"> Accueil </a></li>
-                <li><a href="./formulaire-inscription.php"> Inscription </a></li>
-                <li><a href="./formulaire-connexion.php"> Connexion </a></li>
-            </ul>
+            <div class="footer-accueil">
+                <ul>
+                    <li><a href="accueil.php"> Accueil </a></li>
+                    <li><a href="../html/tarif.html"> Tarif </a></li>
+                    <li><a href="formulaire-horoscope.php"> Horoscope </a></li>
+                </ul>
 
-            <ul>
-                <li><a href="../html/definition-voyance.html"> Définition voyance </a></li>
-                <li><a href="../html/definition-cartomancie.html"> Définition cartomancie </a></li>
-                <li><a href="../html/definition-ressenti-photo.html"> Définition ressenti photo </a></li>
-            </ul>
+                <ul>
+                    <li><a href="formulaire-inscription.php"> Inscription </a></li>
+                    <li><a href="formulaire-connexion.php"> Connexion </a></li>
+                    <li><a href="formulaire-contact.php"> Contact </a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-works">
+                <ul>
+                    <h6> Voyance </h6>
+                    <li><a href="../html/definition-voyance.html"> Définition </a></li>
+                    <li><a href="../html/pratique-voyance.html"> Pratique </a></li>
+                </ul>
 
-            <ul>
-                <li><a href="../html/pratique-voyance.html"> Pratique voyance </a></li>
-                <li><a href="../html/pratique-cartomancie.html"> Pratique cartomancie </a></li>
-                <li><a href="../html/pratique-ressenti-photo.html"> Pratique ressenti photo </a></li>
-            </ul>
+                <ul>
+                    <h6> Cartomancie </h6>
+                    <li><a href="../html/definition-cartomancie.html"> Définition </a></li>
+                    <li><a href="../html/pratique-cartomancie.html"> Pratique </a></li>
+                </ul>
 
-            <ul>
-                <li><a href="./formulaire-avis.php"> Avis </a></li>
-                <li><a href="./formulaire-contact.php"> Contact </a></li>
-                <li><a href="./formulaire-horoscope.php"> Horoscope </a></li>
-            </ul>
+                <ul>
+                    <h6> Ressenti Photo </h6>
+                    <li><a href="../html/definition-ressenti-photo.html"> Définition </a></li>
+                    <li><a href="../html/pratique-ressenti-photo.html"> Pratique </a></li>
+                </ul>
+            </div>
         </div>
 
         <div class="copyright-info">

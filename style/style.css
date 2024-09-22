@@ -46,8 +46,7 @@ body {
   footer .nav-links-2 {
     flex-direction: row;
     justify-content: space-between;
-    gap: 5em;
-    padding: 0;
+    gap: 4em;
   }
 }
 
@@ -56,8 +55,8 @@ body {
   header .hamburger {
     font-size: 1.5em;
     position: absolute;
-    top: 16px;
-    right: 30px;
+    top: 9px;
+    right: 15px;
     z-index: 2000;
     cursor: pointer;
     color: #fff;
@@ -69,7 +68,7 @@ body {
   .hamburger-container {
     background: linear-gradient(90deg, rgb(15, 0, 146), rgb(176, 0, 176));
     width: 100%;
-    padding: 21px;
+    padding: 15px;
     position: fixed;
     top: 0;
     z-index: 1001;
@@ -77,6 +76,7 @@ body {
   .hamburger.cross {
     font-size: 1.5em;
     color: #fff;
+    padding-top: 8px;
   }
   .lien-home-connect {
     padding-top: 2em;
@@ -98,7 +98,7 @@ body {
   header .lien-page-header {
     flex-direction: column;
     align-items: flex-start;
-    padding-bottom: 33em;
+    padding-top: 0;
   }
   .lien-page-header {
     position: fixed;
@@ -119,13 +119,20 @@ body {
     position: relative;
     display: inline-block;
     max-width: 100%;
-    padding-bottom: 5em;
+  }
+  .lien-connect,
+  .lien-deconnect,
+  .lien-home {
+    padding: 2em 0 0 0.5em;
+  }
+  .social-link {
+    padding-bottom: 3em;
   }
   .navbar {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    padding: 0.8em;
+    padding: 0 0.8em;
   }
   .dropdown-content {
     margin: -3.5em 11em;
@@ -138,6 +145,9 @@ body {
   }
   .back-home {
     height: 1.3em;
+  }
+  .photo-logo {
+    padding-top: 1em;
   }
   .intro {
     width: 95%;
@@ -153,10 +163,9 @@ body {
     font-size: 1.2em;
   }
   footer .nav-links-2 {
-    flex-direction: column;
     align-items: center;
-    gap: 2em;
-    padding: 10px;
+    gap: 4em;
+    padding: 0 1em 0 0;
   }
   footer .copyright-info a {
     font-size: 0.875rem;
@@ -166,6 +175,21 @@ body {
     font-size: 0.875rem;
     text-align: center;
     padding: 15px;
+  }
+  footer .footer-accueil,
+  footer .footer-works {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer-accueil {
+    padding-left: 2em;
+    line-height: 2.3;
+    gap: 0;
+  }
+  footer .footer-works {
+    padding-left: 1em;
+    line-height: 1.5;
+    gap: 1em;
   }
   .copyright-info {
     font-size: 0.75rem;
@@ -180,7 +204,7 @@ body {
   .tarif-contact-avis {
     flex-direction: column;
     align-items: flex-start;
-    padding-bottom: 17em;
+    padding-bottom: 2em;
   }
   header .tarif-contact-avis {
     align-items: flex-start;
@@ -209,12 +233,19 @@ body {
   .intro .liste-domaines-conteneur {
     font-size: 1em;
   }
+  h6 {
+    font-size: 0.87em;
+  }
 }
 
 /* Téléphones portables */
 @media (min-width: 320px) and (max-width: 360px) {
   header .hamburger {
-    font-size: 1.5em;
+    font-size: 1.4em;
+    top: 7px;
+  }
+  .hamburger-container {
+    padding: 12px;
   }
   body .intro {
     width: 90%;
@@ -258,11 +289,11 @@ body {
     width: 100%;
     font-size: 14px;
   }
-  .copyright-info {
-    font-size: 0.7rem;
-  }
   footer .copyright-info a {
     font-size: 1em;
+  }
+  .copyright-info {
+    font-size: 0.7rem;
   }
 }
 
@@ -284,7 +315,7 @@ nav {
 .photo-logo {
   max-width: 1990px;
   width: 100%;
-  max-height: 225px;
+  max-height: 180px;
   height: auto;
 }
 
@@ -303,7 +334,6 @@ nav {
   align-items: center;
   background: linear-gradient(90deg, rgb(15, 0, 146), rgb(176, 0, 176));
   width: 100%;
-  padding: 10px 0;
 }
 
 .lien-home,
@@ -436,6 +466,12 @@ h2 {
   text-align: center;
 }
 
+h6 {
+  font-size: 14px;
+  color: #f2f2f2;
+  text-decoration: underline 2px;
+}
+
 .separator {
   border: none;
   height: 2px;
@@ -462,6 +498,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1em;
   overflow-y: auto;
   min-height: 340px;
 }
@@ -476,17 +513,23 @@ footer {
 .nav-links-1 {
   display: flex;
   justify-content: center;
-  gap: 50px;
-  padding: 20px;
+  gap: 58px;
   flex-wrap: wrap;
+  padding-top: 1em;
 }
 
 .nav-links-2 {
   display: flex;
   justify-content: center;
-  gap: 8em;
+  gap: 4em;
+  padding-top: 2em;
   letter-spacing: 0.8px;
-  margin-bottom: 20px;
+}
+
+.footer-accueil,
+.footer-works {
+  display: flex;
+  gap: 3em;
 }
 
 .social-link,
@@ -556,7 +599,7 @@ a:hover,
   justify-content: center;
   gap: 20px;
   padding: 20px 10px;
-  margin-top: 20px;
+  margin-top: 25px;
   width: 100%;
   background-color: #fff;
   text-align: center;

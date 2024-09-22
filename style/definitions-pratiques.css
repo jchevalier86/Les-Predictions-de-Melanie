@@ -30,7 +30,11 @@
 /* Petites tablettes et grands téléphones */
 @media (max-width: 768px) {
   .lien-home {
-    padding-left: 15px;
+    padding: 2em 0 1.5em 1.5em;
+  }
+  body .intro {
+    width: 90%;
+    margin-top: 6em;
   }
   .presentation.show {
     padding: 20px 0;

@@ -1,6 +1,6 @@
 <?php
-    require './config.php'; // Inclure le fichier de connexion
-    require './function.php';
+    require 'config.php'; // Inclure le fichier de connexion
+    require 'function.php';
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $token = $_POST['token'];
@@ -43,7 +43,7 @@
                         $stmt->bind_param("s", $token);
                         $stmt->execute();
                         $_SESSION['successMessages']['password_reset'] = "Votre mot de passe a été réinitialisé avec succès !";
-                        header ('Location: ./formulaire-connexion.php');
+                        header ('Location: formulaire-connexion.php');
                         exit();
                     } else {
                         echo "Erreur de préparation de la requête : " . $conn->error;
@@ -101,7 +101,7 @@
 
             <!-- Logo maison accueil -->
             <div class="lien-home">
-                <img class="back-home" src="../images/maison-accueil.png" alt="Retour à la page d'accueil" onclick="window.location.href='./accueil.php'">
+                <img class="back-home" src="../images/maison-accueil.png" alt="Retour à la page d'accueil" onclick="window.location.href='accueil.php'">
                 <span class="home"> Accueil </span>
             </div>
 
@@ -114,7 +114,7 @@
     <!-- Section du formulaire réinitialisation du mot de passe -->
     <div class="container-2">
 
-        <form action="./reset_password.php" method="POST">
+        <form action="reset_password.php" method="POST">
             <h2>Réinitialiser le mot de passe</h2>
             
             <!-- Ce champ caché inclut un token CSRF (Cross-Site Request Forgery) dans le formulaire. Ce token est généré par le serveur et inclus dans le formulaire pour protéger contre les attaques CSRF. Lors de la soumission du formulaire, le serveur vérifie ce token pour s'assurer que la requête provient de l'utilisateur légitime et non d'un attaquant. -->
@@ -170,29 +170,39 @@
         </div>
 
         <div class="nav-links-2">
-            <ul>
-                <li><a href="./accueil.php"> Accueil </a></li>
-                <li><a href="./formulaire-inscription.php"> Inscription </a></li>
-                <li><a href="./formulaire-connexion.php"> Connexion </a></li>
-            </ul>
+            <div class="footer-accueil">
+                <ul>
+                    <li><a href="accueil.php"> Accueil </a></li>
+                    <li><a href="../html/tarif.html"> Tarif </a></li>
+                    <li><a href="formulaire-horoscope.php"> Horoscope </a></li>
+                </ul>
 
-            <ul>
-                <li><a href="../html/definition-voyance.html"> Définition voyance </a></li>
-                <li><a href="../html/definition-cartomancie.html"> Définition cartomancie </a></li>
-                <li><a href="../html/definition-ressenti-photo.html"> Définition ressenti photo </a></li>
-            </ul>
+                <ul>
+                    <li><a href="formulaire-inscription.php"> Inscription </a></li>
+                    <li><a href="formulaire-connexion.php"> Connexion </a></li>
+                    <li><a href="formulaire-contact.php"> Contact </a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-works">
+                <ul>
+                    <h6> Voyance </h6>
+                    <li><a href="../html/definition-voyance.html"> Définition </a></li>
+                    <li><a href="../html/pratique-voyance.html"> Pratique </a></li>
+                </ul>
 
-            <ul>
-                <li><a href="../html/pratique-voyance.html"> Pratique voyance </a></li>
-                <li><a href="../html/pratique-cartomancie.html"> Pratique cartomancie </a></li>
-                <li><a href="../html/pratique-ressenti-photo.html"> Pratique ressenti photo </a></li>
-            </ul>
+                <ul>
+                    <h6> Cartomancie </h6>
+                    <li><a href="../html/definition-cartomancie.html"> Définition </a></li>
+                    <li><a href="../html/pratique-cartomancie.html"> Pratique </a></li>
+                </ul>
 
-            <ul>
-                <li><a href="./formulaire-avis.php"> Avis </a></li>
-                <li><a href="./formulaire-contact.php"> Contact </a></li>
-                <li><a href="./formulaire-horoscope.php"> Horoscope </a></li>
-            </ul>
+                <ul>
+                    <h6> Ressenti Photo </h6>
+                    <li><a href="../html/definition-ressenti-photo.html"> Définition </a></li>
+                    <li><a href="../html/pratique-ressenti-photo.html"> Pratique </a></li>
+                </ul>
+            </div>
         </div>
 
         <div class="copyright-info">

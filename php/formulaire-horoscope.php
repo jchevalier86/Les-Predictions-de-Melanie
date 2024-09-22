@@ -1,5 +1,5 @@
 <?php
-  require './config.php';
+  require 'config.php';
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +45,7 @@
       <!-- Logo maison accueil -->
       <div class="lien-home">
         <img class="back-home" src="../images/maison-accueil.png" alt="Retour à la page d'accueil"
-          onclick="window.location.href='./accueil.php'">
+          onclick="window.location.href='accueil.php'">
         <span class="home"> Accueil </span>
       </div>
 
@@ -59,8 +59,8 @@
             </button>
           </div>
           <div class="dropdown-content">
-            <a href="./formulaire-inscription.php"> Inscription </a>
-            <a href="./formulaire-connexion.php"> Connexion </a>
+            <a href="formulaire-inscription.php"> Inscription </a>
+            <a href="formulaire-connexion.php"> Connexion </a>
           </div>
         </div>
 
@@ -104,9 +104,9 @@
       <!-- Liens directs pour Tarif, Contact, Avis clients et Horoscope -->
       <div class="tarif-contact-avis">
         <a href="../html/tarif.html"> Tarif </a>
-        <a href="./formulaire-contact.php"> Contact </a>
-        <a href="./formulaire-avis.php"> Avis </a>
-        <a href="./formulaire-horoscope.php"> Horoscope </a>
+        <a href="formulaire-contact.php"> Contact </a>
+        <a href="formulaire-avis.php"> Avis </a>
+        <a href="formulaire-horoscope.php"> Horoscope </a>
       </div>
     </nav>
   </header>
@@ -114,7 +114,7 @@
   <!-- Conteneur principal pour le formulaire d'horoscope -->
   <div class="container">
     <!-- Formulaire pour sélectionner le signe astrologique et obtenir l'horoscope -->
-    <form action="./choix-horoscope.php" method="POST">
+    <form action="choix-horoscope.php" method="POST">
       <h1> Choisissez le type d'horoscope </h1>
 
       <label for="type"> Type d'horoscope : </label>
@@ -155,29 +155,39 @@
     </div>
 
     <div class="nav-links-2">
-      <ul>
-        <li><a href="./accueil.php"> Accueil </a></li>
-        <li><a href="./formulaire-inscription.php"> Inscription </a></li>
-        <li><a href="./formulaire-connexion.php"> Connexion </a></li>
-      </ul>
+      <div class="footer-accueil">
+        <ul>
+          <li><a href="accueil.php"> Accueil </a></li>
+          <li><a href="../html/tarif.html"> Tarif </a></li>
+          <li><a href="formulaire-horoscope.php"> Horoscope </a></li>
+        </ul>
 
-      <ul>
-        <li><a href="../html/definition-voyance.html"> Définition voyance </a></li>
-        <li><a href="../html/definition-cartomancie.html"> Définition cartomancie </a></li>
-        <li><a href="../html/definition-ressenti-photo.html"> Définition ressenti photo </a></li>
-      </ul>
+        <ul>
+          <li><a href="formulaire-inscription.php"> Inscription </a></li>
+          <li><a href="formulaire-connexion.php"> Connexion </a></li>
+          <li><a href="formulaire-contact.php"> Contact </a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-works">
+        <ul>
+          <h6> Voyance </h6>
+          <li><a href="../html/definition-voyance.html"> Définition </a></li>
+          <li><a href="../html/pratique-voyance.html"> Pratique </a></li>
+        </ul>
 
-      <ul>
-        <li><a href="../html/pratique-voyance.html"> Pratique voyance </a></li>
-        <li><a href="../html/pratique-cartomancie.html"> Pratique cartomancie </a></li>
-        <li><a href="../html/pratique-ressenti-photo.html"> Pratique ressenti photo </a></li>
-      </ul>
+        <ul>
+          <h6> Cartomancie </h6>
+          <li><a href="../html/definition-cartomancie.html"> Définition </a></li>
+          <li><a href="../html/pratique-cartomancie.html"> Pratique </a></li>
+        </ul>
 
-      <ul>
-        <li><a href="./formulaire-avis.php"> Avis </a></li>
-        <li><a href="./formulaire-contact.php"> Contact </a></li>
-        <li><a href="./formulaire-horoscope.php"> Horoscope </a></li>
-      </ul>
+        <ul>
+          <h6> Ressenti Photo </h6>
+          <li><a href="../html/definition-ressenti-photo.html"> Définition </a></li>
+          <li><a href="../html/pratique-ressenti-photo.html"> Pratique </a></li>
+        </ul>
+      </div>
     </div>
 
     <div class="copyright-info">

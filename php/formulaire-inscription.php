@@ -1,6 +1,6 @@
 <?php
-  require './config.php';
-  require './function.php';
+  require 'config.php';
+  require 'function.php';
 
   // Vérifier si l'utilisateur est connecté
   $isConnected = isset($_SESSION['user_id']);
@@ -44,7 +44,7 @@
       <!-- Logo maison accueil -->
       <div class="lien-home">
         <img class="back-home" src="../images/maison-accueil.png" alt="Retour à la page d'accueil"
-          onclick="window.location.href='./accueil.php'">
+          onclick="window.location.href='accueil.php'">
         <span class="home"> Accueil </span>
       </div>
 
@@ -57,7 +57,7 @@
   <div class="container">
     
     <!-- Formulaire d'inscription, les données sont envoyées à "inscription.php" en utilisant la méthode POST -->
-    <form action="./inscription.php" method="POST">
+    <form action="inscription.php" method="POST">
       <?php if (isset($_SESSION['errorMessages']['isLoggedIn'])): ?>
       <span style="display: block; margin: 20px auto; padding: 10px; width: fit-content; border: 2px solid #C62828; background: #FFEBEE; color: #C62828; border-radius: 5px; text-align: center; font-size: 16px;"> <?php echo $_SESSION['errorMessages']['isLoggedIn']; ?> </span>
       <?php endif; ?>
@@ -122,7 +122,7 @@
       <div class="inscription-google">
         <!-- Lien pour se connecter si l'utilisateur a déjà un compte -->
         Vous avez déjà un compte ?
-        <a href="./formulaire-connexion.php" class="connectez-vous"> Se connecter </a>
+        <a href="formulaire-connexion.php" class="connectez-vous"> Se connecter </a>
         <br>
 
         <!-- <div class="compte-google">
@@ -143,7 +143,6 @@
         <!-- Liens vers les réseaux sociaux et PayPal -->
         <a class="logo-footer" href="https://www.instagram.com/melanievoyante/" target="_blank">
           <img src="../images/instagram.png" alt="Logo Instagram">
-          <!-- <i class="fab fa-instagram fa-2x instagram-logo"> </i> -->
           <span class="insta-paypal-mail"> Suivez-moi sur Instagram </span>
         </a>
       </div>
@@ -151,7 +150,6 @@
       <div class="social-link">
         <a class="logo-footer" href="https://www.paypal.me/maupin20" target="_blank">
           <img src="../images/paypal.png" alt="Logo Paypal">
-          <!-- <i class="fa-brands fa-paypal fa-2xl paypal-logo"> </i> -->
           <span class="insta-paypal-mail"> PayPal </span>
         </a>
       </div>
@@ -160,36 +158,45 @@
       <div class="social-link">
         <a class="logo-footer " href="mailto:les-predictions-de-melanie@outlook.com" target="_blank">
           <img src="../images/gmail.png" alt="Logo Gmail">
-          <!-- <i class="fa-regular fa-envelope fa-2xl gmail-logo"></i> -->
           <span class="insta-paypal-mail"> Contactez-moi par mail </span>
         </a>
       </div>
     </div>
 
     <div class="nav-links-2">
-      <ul>
-        <li><a href="./accueil.php"> Accueil </a></li>
-        <li><a href="./formulaire-inscription.php"> Inscription </a></li>
-        <li><a href="./formulaire-connexion.php"> Connexion </a></li>
-      </ul>
+      <div class="footer-accueil">
+        <ul>
+          <li><a href="accueil.php"> Accueil </a></li>
+          <li><a href="../html/tarif.html"> Tarif </a></li>
+          <li><a href="formulaire-horoscope.php"> Horoscope </a></li>
+        </ul>
 
-      <ul>
-        <li><a href="../html/definition-voyance.html"> Définition voyance </a></li>
-        <li><a href="../html/definition-cartomancie.html"> Définition cartomancie </a></li>
-        <li><a href="../html/definition-ressenti-photo.html"> Définition ressenti photo </a></li>
-      </ul>
+        <ul>
+          <li><a href="formulaire-inscription.php"> Inscription </a></li>
+          <li><a href="formulaire-connexion.php"> Connexion </a></li>
+          <li><a href="formulaire-contact.php"> Contact </a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-works">
+        <ul>
+          <h6> Voyance </h6>
+          <li><a href="../html/definition-voyance.html"> Définition </a></li>
+          <li><a href="../html/pratique-voyance.html"> Pratique </a></li>
+        </ul>
 
-      <ul>
-        <li><a href="../html/pratique-voyance.html"> Pratique voyance </a></li>
-        <li><a href="../html/pratique-cartomancie.html"> Pratique cartomancie </a></li>
-        <li><a href="../html/pratique-ressenti-photo.html"> Pratique ressenti photo </a></li>
-      </ul>
+        <ul>
+          <h6> Cartomancie </h6>
+          <li><a href="../html/definition-cartomancie.html"> Définition </a></li>
+          <li><a href="../html/pratique-cartomancie.html"> Pratique </a></li>
+        </ul>
 
-      <ul>
-        <li><a href="./formulaire-avis.php"> Avis </a></li>
-        <li><a href="./formulaire-contact.php"> Contact </a></li>
-        <li><a href="./formulaire-horoscope.php"> Horoscope </a></li>
-      </ul>
+        <ul>
+          <h6> Ressenti Photo </h6>
+          <li><a href="../html/definition-ressenti-photo.html"> Définition </a></li>
+          <li><a href="../html/pratique-ressenti-photo.html"> Pratique </a></li>
+        </ul>
+      </div>
     </div>
 
     <div class="copyright-info">

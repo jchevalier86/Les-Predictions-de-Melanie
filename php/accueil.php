@@ -1,5 +1,5 @@
 <?php
-  require './config.php';
+  require 'config.php';
 ?>
 
 <!DOCTYPE html>
@@ -49,14 +49,14 @@
       <!-- Icône de déconnexion avec un lien vers la page de déconnexion -->
       <div class="lien-deconnect">
         <img class="icone-connect" src="../images/deconnexion.png" alt="Aller à la page accueil"
-          onclick="window.location.href='./deconnexion.php'">
+          onclick="window.location.href='deconnexion.php'">
         <span class="deconnect"> Déconnexion </span>
       </div>
       <?php else: ?>
       <!-- Icône de connexion avec un lien vers la page de connexion -->
       <div class="lien-connect">
         <img class="icone-connect" src="../images/connexion.png" alt="Aller à la page de connexion"
-          onclick="window.location.href='./formulaire-connexion.php'">
+          onclick="window.location.href='formulaire-connexion.php'">
         <span class="connect"> Connexion </span>
       </div>
       <?php endif; ?>
@@ -70,8 +70,8 @@
               <i class="fa fa-caret-down"> </i>
             </button>
             <div class="dropdown-content">
-              <a href="./formulaire-inscription.php"> Inscription </a>
-              <a href="./formulaire-connexion.php"> Connexion </a>
+              <a href="formulaire-inscription.php"> Inscription </a>
+              <a href="formulaire-connexion.php"> Connexion </a>
             </div>
           </div>
 
@@ -115,9 +115,9 @@
         <!-- Liens directs pour Tarif, Contact, Avis clients et Horoscope -->
           <div class="tarif-contact-avis">
             <a href="../html/tarif.html"> Tarif </a>
-            <a href="./formulaire-contact.php"> Contact </a>
-            <a href="./formulaire-avis.php"> Avis </a>
-            <a href="./formulaire-horoscope.php"> Horoscope </a>
+            <a href="formulaire-contact.php"> Contact </a>
+            <a href="formulaire-avis.php"> Avis </a>
+            <a href="formulaire-horoscope.php"> Horoscope </a>
           </div>
         </div>
       </nav>
@@ -189,13 +189,13 @@
         <div class="social-link">
           <!-- Liens vers les réseaux sociaux et PayPal -->
           <a class="logo-footer" href="https://www.instagram.com/melanievoyante/" target="_blank">
-            <img src="../images/instagram.png" alt="Logo Instagram">/
+            <img src="../images/instagram.png" alt="Logo Instagram">
             <span class="insta-paypal-mail"> Suivez-moi sur Instagram </span>
           </a>
         </div>
         <div class="social-link">
           <a class="logo-footer" href="https://www.paypal.me/maupin20" target="_blank">
-            <img src="../images/paypal.png" alt="Logo Paypal">/
+            <img src="../images/paypal.png" alt="Logo Paypal">
             <span class="insta-paypal-mail"> PayPal </span>
           </a>
         </div>
@@ -210,29 +210,39 @@
       </div>
 
       <div class="nav-links-2">
-        <ul>
-          <li><a href="./accueil.php"> Accueil </a></li>
-          <li><a href="./formulaire-inscription.php"> Inscription </a></li>
-          <li><a href="./formulaire-connexion.php"> Connexion </a></li>
-        </ul>
+        <div class="footer-accueil">
+          <ul>
+            <li><a href="accueil.php"> Accueil </a></li>
+            <li><a href="../html/tarif.html"> Tarif </a></li>
+            <li><a href="formulaire-horoscope.php"> Horoscope </a></li>
+          </ul>
 
-        <ul>
-          <li><a href="../html/definition-voyance.html"> Définition voyance </a></li>
-          <li><a href="../html/definition-cartomancie.html"> Définition cartomancie </a></li>
-          <li><a href="../html/definition-ressenti-photo.html"> Définition ressenti photo </a></li>
-        </ul>
+          <ul>
+            <li><a href="formulaire-inscription.php"> Inscription </a></li>
+            <li><a href="formulaire-connexion.php"> Connexion </a></li>
+            <li><a href="formulaire-contact.php"> Contact </a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-works">
+          <ul>
+            <h6> Voyance </h6>
+            <li><a href="../html/definition-voyance.html"> Définition </a></li>
+            <li><a href="../html/pratique-voyance.html"> Pratique </a></li>
+          </ul>
 
-        <ul>
-          <li><a href="../html/pratique-voyance.html"> Pratique voyance </a></li>
-          <li><a href="../html/pratique-cartomancie.html"> Pratique cartomancie </a></li>
-          <li><a href="../html/pratique-ressenti-photo.html"> Pratique ressenti photo </a></li>
-        </ul>
+          <ul>
+            <h6> Cartomancie </h6>
+            <li><a href="../html/definition-cartomancie.html"> Définition </a></li>
+            <li><a href="../html/pratique-cartomancie.html"> Pratique </a></li>
+          </ul>
 
-        <ul>
-          <li><a href="./formulaire-avis.php"> Avis </a></li>
-          <li><a href="./formulaire-contact.php"> Contact </a></li>
-          <li><a href="./formulaire-horoscope.php"> Horoscope </a></li>
-        </ul>
+          <ul>
+            <h6> Ressenti Photo </h6>
+            <li><a href="../html/definition-ressenti-photo.html"> Définition </a></li>
+            <li><a href="../html/pratique-ressenti-photo.html"> Pratique </a></li>
+          </ul>
+        </div>
       </div>
 
       <div class="copyright-info">
